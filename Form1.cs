@@ -13,10 +13,12 @@ namespace proyecto1programacion
     public partial class Form1 : Form
     {
         List<Producto> productos = new List<Producto>();
+        List<Cliente>clientes= new List<Cliente>();
         public Form1()
         {
             InitializeComponent();
             CargarProductos();
+            CargarClientes();
         }
 
         private void CargarProductos()
@@ -24,6 +26,12 @@ namespace proyecto1programacion
             PersistenciaProducto persistencia = new PersistenciaProducto();
             productos = persistencia.leerJson();
             ActualizarComboBox();
+        }
+        private void CargarClientes()
+        {
+            PersistenciaCliente persistencia = new PersistenciaCliente();
+            clientes = persistencia.leerJson();
+            
         }
 
         private void ActualizarComboBox()
@@ -54,7 +62,7 @@ namespace proyecto1programacion
         {
             Producto producto = new Producto();
             producto.Codigo = textBoxCodigo.Text;
-            producto.Nombre = textBoxNombre.Text;
+            producto.Nombre = textBoxNombreProducto.Text;
             producto.Marca = textBoxMarca.Text;
             producto.Precio_compra = numeriPrecioCompra.Value;
             producto.Precio_venta = numericPrecioVenta.Value;
@@ -98,6 +106,21 @@ namespace proyecto1programacion
 
         private void label10_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void buttonIngresoCliente_Click(object sender, EventArgs e)
+        {
+            Cliente cliente= new Cliente();
+            cliente.Nit=textBoxNit.Text;
+            cliente.Nombre=textBoxNombreCliente.Text;
+            cliente.Apellido = textBoxApellidoCliente.Text;
+            cliente.Direccion = textBoxDireccionCliente.Text;
+            cliente.Telefono = textBoxTelefonoCliente.Text;
+            clientes.Add(cliente);
+            PersistenciaCliente persistencia = new PersistenciaCliente();
+            persistencia.GuardarJson(clientes);
+            MessageBox.Show("Cliente ingresado correctamente.");
 
         }
     }

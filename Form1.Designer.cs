@@ -37,7 +37,7 @@
             this.numericPrecioVenta = new System.Windows.Forms.NumericUpDown();
             this.numeriPrecioCompra = new System.Windows.Forms.NumericUpDown();
             this.textBoxMarca = new System.Windows.Forms.TextBox();
-            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.textBoxNombreProducto = new System.Windows.Forms.TextBox();
             this.textBoxCodigo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -59,6 +59,17 @@
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBoxNit = new System.Windows.Forms.TextBox();
+            this.textBoxNombreCliente = new System.Windows.Forms.TextBox();
+            this.textBoxApellidoCliente = new System.Windows.Forms.TextBox();
+            this.textBoxDireccionCliente = new System.Windows.Forms.TextBox();
+            this.textBoxTelefonoCliente = new System.Windows.Forms.TextBox();
+            this.buttonIngresoCliente = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -72,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioPrecioVenta)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControl3.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -112,7 +124,7 @@
             this.tabPage3.Controls.Add(this.numericPrecioVenta);
             this.tabPage3.Controls.Add(this.numeriPrecioCompra);
             this.tabPage3.Controls.Add(this.textBoxMarca);
-            this.tabPage3.Controls.Add(this.textBoxNombre);
+            this.tabPage3.Controls.Add(this.textBoxNombreProducto);
             this.tabPage3.Controls.Add(this.textBoxCodigo);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.label5);
@@ -168,12 +180,12 @@
             this.textBoxMarca.Size = new System.Drawing.Size(142, 22);
             this.textBoxMarca.TabIndex = 8;
             // 
-            // textBoxNombre
+            // textBoxNombreProducto
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(266, 80);
-            this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(142, 22);
-            this.textBoxNombre.TabIndex = 7;
+            this.textBoxNombreProducto.Location = new System.Drawing.Point(266, 80);
+            this.textBoxNombreProducto.Name = "textBoxNombreProducto";
+            this.textBoxNombreProducto.Size = new System.Drawing.Size(142, 22);
+            this.textBoxNombreProducto.TabIndex = 7;
             // 
             // textBoxCodigo
             // 
@@ -357,6 +369,17 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.buttonIngresoCliente);
+            this.tabPage5.Controls.Add(this.textBoxTelefonoCliente);
+            this.tabPage5.Controls.Add(this.textBoxDireccionCliente);
+            this.tabPage5.Controls.Add(this.textBoxApellidoCliente);
+            this.tabPage5.Controls.Add(this.textBoxNombreCliente);
+            this.tabPage5.Controls.Add(this.textBoxNit);
+            this.tabPage5.Controls.Add(this.label15);
+            this.tabPage5.Controls.Add(this.label14);
+            this.tabPage5.Controls.Add(this.label13);
+            this.tabPage5.Controls.Add(this.label12);
+            this.tabPage5.Controls.Add(this.label11);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -374,6 +397,96 @@
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Venta";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(42, 21);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(29, 16);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "NIT";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(42, 73);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 16);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Nombre";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(43, 138);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(57, 16);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Apellido";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(42, 190);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(64, 16);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Direccion";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(54, 270);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(61, 16);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "Telefono";
+            // 
+            // textBoxNit
+            // 
+            this.textBoxNit.Location = new System.Drawing.Point(187, 21);
+            this.textBoxNit.Name = "textBoxNit";
+            this.textBoxNit.Size = new System.Drawing.Size(184, 22);
+            this.textBoxNit.TabIndex = 5;
+            // 
+            // textBoxNombreCliente
+            // 
+            this.textBoxNombreCliente.Location = new System.Drawing.Point(187, 73);
+            this.textBoxNombreCliente.Name = "textBoxNombreCliente";
+            this.textBoxNombreCliente.Size = new System.Drawing.Size(184, 22);
+            this.textBoxNombreCliente.TabIndex = 6;
+            // 
+            // textBoxApellidoCliente
+            // 
+            this.textBoxApellidoCliente.Location = new System.Drawing.Point(187, 138);
+            this.textBoxApellidoCliente.Name = "textBoxApellidoCliente";
+            this.textBoxApellidoCliente.Size = new System.Drawing.Size(184, 22);
+            this.textBoxApellidoCliente.TabIndex = 7;
+            // 
+            // textBoxDireccionCliente
+            // 
+            this.textBoxDireccionCliente.Location = new System.Drawing.Point(187, 204);
+            this.textBoxDireccionCliente.Name = "textBoxDireccionCliente";
+            this.textBoxDireccionCliente.Size = new System.Drawing.Size(184, 22);
+            this.textBoxDireccionCliente.TabIndex = 8;
+            // 
+            // textBoxTelefonoCliente
+            // 
+            this.textBoxTelefonoCliente.Location = new System.Drawing.Point(187, 267);
+            this.textBoxTelefonoCliente.Name = "textBoxTelefonoCliente";
+            this.textBoxTelefonoCliente.Size = new System.Drawing.Size(184, 22);
+            this.textBoxTelefonoCliente.TabIndex = 9;
+            // 
+            // buttonIngresoCliente
+            // 
+            this.buttonIngresoCliente.Location = new System.Drawing.Point(545, 111);
+            this.buttonIngresoCliente.Name = "buttonIngresoCliente";
+            this.buttonIngresoCliente.Size = new System.Drawing.Size(315, 77);
+            this.buttonIngresoCliente.TabIndex = 10;
+            this.buttonIngresoCliente.Text = "Registrar Cliente";
+            this.buttonIngresoCliente.UseVisualStyleBackColor = true;
+            this.buttonIngresoCliente.Click += new System.EventHandler(this.buttonIngresoCliente_Click);
             // 
             // Form1
             // 
@@ -398,6 +511,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioPrecioVenta)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -412,7 +527,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxMarca;
-        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.TextBox textBoxNombreProducto;
         private System.Windows.Forms.TextBox textBoxCodigo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -435,6 +550,17 @@
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBoxNombreCliente;
+        private System.Windows.Forms.TextBox textBoxNit;
+        private System.Windows.Forms.Button buttonIngresoCliente;
+        private System.Windows.Forms.TextBox textBoxTelefonoCliente;
+        private System.Windows.Forms.TextBox textBoxDireccionCliente;
+        private System.Windows.Forms.TextBox textBoxApellidoCliente;
     }
 }
 

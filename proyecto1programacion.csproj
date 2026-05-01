@@ -62,6 +62,7 @@
     <Compile Include="MenuPrincipalForm.Designer.cs">
       <DependentUpon>MenuPrincipalForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersistenciaCliente.cs" />
     <Compile Include="PersistenciaProducto.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Program.cs" />
