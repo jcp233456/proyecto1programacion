@@ -32,7 +32,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.buttomIngresoProducto = new System.Windows.Forms.Button();
+            this.buttonIngresoProducto = new System.Windows.Forms.Button();
             this.numericCantidad = new System.Windows.Forms.NumericUpDown();
             this.numericPrecioVenta = new System.Windows.Forms.NumericUpDown();
             this.numeriPrecioCompra = new System.Windows.Forms.NumericUpDown();
@@ -89,7 +89,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.buttomIngresoProducto);
+            this.tabPage3.Controls.Add(this.buttonIngresoProducto);
             this.tabPage3.Controls.Add(this.numericCantidad);
             this.tabPage3.Controls.Add(this.numericPrecioVenta);
             this.tabPage3.Controls.Add(this.numeriPrecioCompra);
@@ -110,14 +110,15 @@
             this.tabPage3.Text = "agregar{";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // buttomIngresoProducto
+            // buttonIngresoProducto
             // 
-            this.buttomIngresoProducto.Location = new System.Drawing.Point(606, 151);
-            this.buttomIngresoProducto.Name = "buttomIngresoProducto";
-            this.buttomIngresoProducto.Size = new System.Drawing.Size(241, 63);
-            this.buttomIngresoProducto.TabIndex = 12;
-            this.buttomIngresoProducto.Text = "Ingresar Producto";
-            this.buttomIngresoProducto.UseVisualStyleBackColor = true;
+            this.buttonIngresoProducto.Location = new System.Drawing.Point(606, 151);
+            this.buttonIngresoProducto.Name = "buttonIngresoProducto";
+            this.buttonIngresoProducto.Size = new System.Drawing.Size(241, 63);
+            this.buttonIngresoProducto.TabIndex = 12;
+            this.buttonIngresoProducto.Text = "Ingresar Producto";
+            this.buttonIngresoProducto.UseVisualStyleBackColor = true;
+            this.buttonIngresoProducto.Click += new System.EventHandler(this.buttonIngresoProducto_Click);
             // 
             // numericCantidad
             // 
@@ -274,7 +275,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button buttomIngresoProducto;
+        private System.Windows.Forms.Button buttonIngresoProducto;
         private System.Windows.Forms.NumericUpDown numericCantidad;
         private System.Windows.Forms.NumericUpDown numericPrecioVenta;
         private System.Windows.Forms.NumericUpDown numeriPrecioCompra;
