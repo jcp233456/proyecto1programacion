@@ -46,14 +46,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.numericCambioPrecioVenta = new System.Windows.Forms.NumericUpDown();
-            this.numericCambioExistencia = new System.Windows.Forms.NumericUpDown();
             this.buttonCambiarProducto = new System.Windows.Forms.Button();
+            this.numericCambioExistencia = new System.Windows.Forms.NumericUpDown();
+            this.numericCambioPrecioVenta = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.numericCmbioPrecioCompra = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -62,8 +64,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericPrecioVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeriPrecioCompra)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericCambioPrecioVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioExistencia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericCambioPrecioVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericCmbioPrecioCompra)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -230,6 +233,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.numericCmbioPrecioCompra);
+            this.tabPage4.Controls.Add(this.label10);
             this.tabPage4.Controls.Add(this.buttonCambiarProducto);
             this.tabPage4.Controls.Add(this.numericCambioExistencia);
             this.tabPage4.Controls.Add(this.numericCambioPrecioVenta);
@@ -245,23 +250,48 @@
             this.tabPage4.Text = "editar";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // buttonCambiarProducto
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1041, 448);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.buttonCambiarProducto.Location = new System.Drawing.Point(691, 106);
+            this.buttonCambiarProducto.Name = "buttonCambiarProducto";
+            this.buttonCambiarProducto.Size = new System.Drawing.Size(206, 80);
+            this.buttonCambiarProducto.TabIndex = 6;
+            this.buttonCambiarProducto.Text = "cambiar producto";
+            this.buttonCambiarProducto.UseVisualStyleBackColor = true;
+            this.buttonCambiarProducto.Click += new System.EventHandler(this.buttonCambiarProducto_Click);
             // 
-            // comboBox1
+            // numericCambioExistencia
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(310, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(226, 24);
-            this.comboBox1.TabIndex = 0;
+            this.numericCambioExistencia.Location = new System.Drawing.Point(310, 301);
+            this.numericCambioExistencia.Name = "numericCambioExistencia";
+            this.numericCambioExistencia.Size = new System.Drawing.Size(208, 22);
+            this.numericCambioExistencia.TabIndex = 5;
+            // 
+            // numericCambioPrecioVenta
+            // 
+            this.numericCambioPrecioVenta.DecimalPlaces = 2;
+            this.numericCambioPrecioVenta.Location = new System.Drawing.Point(310, 238);
+            this.numericCambioPrecioVenta.Name = "numericCambioPrecioVenta";
+            this.numericCambioPrecioVenta.Size = new System.Drawing.Size(208, 22);
+            this.numericCambioPrecioVenta.TabIndex = 4;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(42, 301);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 16);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "existencia";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(42, 244);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(81, 16);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "precio venta";
             // 
             // label7
             // 
@@ -272,46 +302,42 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "encuentre produto a modificar";
             // 
-            // label8
+            // comboBox1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(42, 102);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 16);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "precio venta";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(310, 38);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(226, 24);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label9
+            // tabPage2
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(42, 166);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 16);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "existencia";
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1041, 448);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // numericCambioPrecioVenta
+            // label10
             // 
-            this.numericCambioPrecioVenta.Location = new System.Drawing.Point(310, 96);
-            this.numericCambioPrecioVenta.Name = "numericCambioPrecioVenta";
-            this.numericCambioPrecioVenta.Size = new System.Drawing.Size(208, 22);
-            this.numericCambioPrecioVenta.TabIndex = 4;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(58, 138);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(96, 16);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "precio Compra";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // numericCambioExistencia
+            // numericCmbioPrecioCompra
             // 
-            this.numericCambioExistencia.Location = new System.Drawing.Point(310, 164);
-            this.numericCambioExistencia.Name = "numericCambioExistencia";
-            this.numericCambioExistencia.Size = new System.Drawing.Size(208, 22);
-            this.numericCambioExistencia.TabIndex = 5;
-            // 
-            // buttonCambiarProducto
-            // 
-            this.buttonCambiarProducto.Location = new System.Drawing.Point(691, 106);
-            this.buttonCambiarProducto.Name = "buttonCambiarProducto";
-            this.buttonCambiarProducto.Size = new System.Drawing.Size(206, 80);
-            this.buttonCambiarProducto.TabIndex = 6;
-            this.buttonCambiarProducto.Text = "cambiar producto";
-            this.buttonCambiarProducto.UseVisualStyleBackColor = true;
+            this.numericCmbioPrecioCompra.DecimalPlaces = 2;
+            this.numericCmbioPrecioCompra.Location = new System.Drawing.Point(328, 138);
+            this.numericCmbioPrecioCompra.Name = "numericCmbioPrecioCompra";
+            this.numericCmbioPrecioCompra.Size = new System.Drawing.Size(208, 22);
+            this.numericCmbioPrecioCompra.TabIndex = 8;
             // 
             // Form1
             // 
@@ -331,8 +357,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numeriPrecioCompra)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericCambioPrecioVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioExistencia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericCambioPrecioVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericCmbioPrecioCompra)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -365,6 +392,8 @@
         private System.Windows.Forms.Button buttonCambiarProducto;
         private System.Windows.Forms.NumericUpDown numericCambioExistencia;
         private System.Windows.Forms.NumericUpDown numericCambioPrecioVenta;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown numericCmbioPrecioCompra;
     }
 }
 
