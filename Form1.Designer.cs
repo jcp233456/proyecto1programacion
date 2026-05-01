@@ -46,6 +46,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.numericCmbioPrecioCompra = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
             this.buttonCambiarProducto = new System.Windows.Forms.Button();
             this.numericCambioExistencia = new System.Windows.Forms.NumericUpDown();
             this.numericCambioPrecioVenta = new System.Windows.Forms.NumericUpDown();
@@ -54,8 +56,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
-            this.numericCmbioPrecioCompra = new System.Windows.Forms.NumericUpDown();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -64,9 +67,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericPrecioVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeriPrecioCompra)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericCmbioPrecioCompra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioExistencia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioPrecioVenta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericCmbioPrecioCompra)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.tabControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -250,6 +255,24 @@
             this.tabPage4.Text = "editar";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // numericCmbioPrecioCompra
+            // 
+            this.numericCmbioPrecioCompra.DecimalPlaces = 2;
+            this.numericCmbioPrecioCompra.Location = new System.Drawing.Point(328, 138);
+            this.numericCmbioPrecioCompra.Name = "numericCmbioPrecioCompra";
+            this.numericCmbioPrecioCompra.Size = new System.Drawing.Size(208, 22);
+            this.numericCmbioPrecioCompra.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(58, 138);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(96, 16);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "precio Compra";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
             // buttonCambiarProducto
             // 
             this.buttonCambiarProducto.Location = new System.Drawing.Point(691, 106);
@@ -313,31 +336,44 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.tabControl3);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1041, 448);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "clientes";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // tabControl3
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(58, 138);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 16);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "precio Compra";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.tabControl3.Controls.Add(this.tabPage5);
+            this.tabControl3.Controls.Add(this.tabPage6);
+            this.tabControl3.Location = new System.Drawing.Point(29, 26);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(958, 400);
+            this.tabControl3.TabIndex = 0;
             // 
-            // numericCmbioPrecioCompra
+            // tabPage5
             // 
-            this.numericCmbioPrecioCompra.DecimalPlaces = 2;
-            this.numericCmbioPrecioCompra.Location = new System.Drawing.Point(328, 138);
-            this.numericCmbioPrecioCompra.Name = "numericCmbioPrecioCompra";
-            this.numericCmbioPrecioCompra.Size = new System.Drawing.Size(208, 22);
-            this.numericCmbioPrecioCompra.TabIndex = 8;
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(950, 371);
+            this.tabPage5.TabIndex = 0;
+            this.tabPage5.Text = "Registrar cliente";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(950, 371);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "Venta";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -357,9 +393,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numeriPrecioCompra)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericCmbioPrecioCompra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioExistencia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioPrecioVenta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericCmbioPrecioCompra)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabControl3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -394,6 +432,9 @@
         private System.Windows.Forms.NumericUpDown numericCambioPrecioVenta;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown numericCmbioPrecioCompra;
+        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage6;
     }
 }
 
