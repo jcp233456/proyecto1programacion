@@ -1,65 +1,47 @@
-# GEMINI.md - Project Context
+# Proyecto 1 Programación - Sistema de Gestión
 
-## Project Overview
-**proyecto1programacion** is a desktop application developed using **C#** and **Windows Forms**, targeting **.NET Framework 4.7.2**. It serves as an inventory management prototype, allowing users to input product details and persist them using JSON.
+Este proyecto es una aplicación de escritorio desarrollada en C# utilizando Windows Forms. Está diseñada para gestionar clientes, productos y facturas, utilizando archivos JSON locales para la persistencia de datos.
 
-### Tech Stack
-- **Language:** C#
+## Descripción del Proyecto
+
+La aplicación permite realizar operaciones básicas de CRUD (Crear, Leer, Actualizar, Borrar) sobre las entidades principales del sistema. La persistencia se maneja de forma sencilla mediante la serialización y deserialización de listas de objetos a archivos de texto en formato JSON.
+
+### Tecnologías Principales
+
+- **Lenguaje:** C#
 - **Framework:** .NET Framework 4.7.2
-- **UI:** Windows Forms (WinForms)
-- **Dependencies:** 
-  - `Newtonsoft.Json` (v13.0.5-beta1): Used for data serialization and persistence.
-- **IDE:** Visual Studio (inferred from `.slnx`, `.csproj`, and `.vs` folder).
+- **Interfaz de Usuario:** Windows Forms (WinForms)
+- **Librerías Externas:** `Newtonsoft.Json` (para el manejo de archivos JSON)
 
-## Project Structure
-- `Program.cs`: Entry point of the application. It launches `Form1`.
-- `Form1.cs`: The primary data entry form for products. It handles user input and triggers persistence logic.
-- `MenuPrincipalForm.cs`: A secondary form intended to serve as a main menu.
-- `Producto.cs`: Data model representing a product with properties like `Codigo`, `Nombre`, `Marca`, `Precio_compra`, `Precio_venta`, and `Cantidad_existente`.
-- `PersistenciaProducto.cs`: Data Access Layer (DAL). Manages reading from and writing to `jsonProducto.txt` using JSON serialization.
-- `proyecto1programacion.csproj`: Project configuration and dependency management.
-- `App.config`: Application configuration.
-- `packages.config`: NuGet package management file.
+## Arquitectura y Estructura
 
-## Data Persistence
-The application uses a simple file-based persistence strategy:
-- **File:** `jsonProducto.txt` (local directory).
-- **Format:** JSON array of `Producto` objects.
-- **Logic:** Encapsulated in `PersistenciaProducto.cs`.
+El proyecto sigue una estructura tradicional de WinForms con lógica en el código subyacente (*code-behind*), apoyada por clases de persistencia dedicadas.
 
-## Building and Running
-As a standard .NET Framework project, it can be managed using `msbuild`.
+### Componentes Clave
 
-### Prerequisites
-- .NET Framework 4.7.2 Developer Pack.
-- MSBuild (usually included with Visual Studio or Build Tools for Visual Studio).
+- **Modelos (`.cs`):**
+  - `Cliente.cs`: Define los atributos de los clientes.
+  - `Producto.cs`: Define los atributos de los productos (código, nombre, marca, precios, existencia).
+  - `Factura.cs`: Gestiona la información de las ventas/facturación.
+- **Persistencia (`Persistencia*.cs`):**
+  - Clases como `PersistenciaCliente`, `PersistenciaProducto` y `PersistenciaFactura` encapsulan la lógica de lectura y escritura en archivos JSON (ej. `jsonCliente.txt`).
+- **Formularios (`Form*.cs`):**
+  - `Form1.cs`: Actúa como la interfaz principal para la gestión de datos y visualización.
+  - `MenuPrincipalForm.cs`: Sirve como punto de navegación central de la aplicación.
 
-### Building
-To build the project in Debug mode:
-```powershell
-msbuild /p:Configuration=Debug
-```
+## Guía de Desarrollo
 
-### Running
-To run the application after building:
-```powershell
-.\bin\Debug\proyecto1programacion.exe
-```
+### Convenciones de Código
 
-### Cleaning
-To clean build artifacts:
-```powershell
-msbuild /t:clean
-```
+- **Nomenclatura:** Se utiliza PascalCase para propiedades y clases, y camelCase para variables locales. Algunas propiedades de modelos pueden incluir guiones bajos (ej. `Precio_compra`).
+- **Persistencia:** Cualquier cambio en las listas de objetos debe ser seguido por una llamada al método `GuardarJson` de la clase de persistencia correspondiente para asegurar que los cambios se reflejen en el disco.
+- **UI:** El enlace de datos en los formularios se realiza comúnmente a través de la propiedad `DataSource` de los controles (como `ComboBox`).
 
-## Development Conventions
-- **Naming:** Follows standard .NET PascalCase for classes, methods, and public properties. Internal fields in `Producto.cs` currently use camelCase (e.g., `codigo`).
-- **Namespace:** `proyecto1programacion`.
-- **UI Logic:** Encapsulated in code-behind files (`.cs`) associated with WinForms designers.
-- **Persistence:** All data management should go through `PersistenciaProducto`.
+### Construcción y Ejecución
 
-## TODOs / Next Steps
-- [ ] Implement robust error handling for file I/O in `PersistenciaProducto`.
-- [ ] Expand `MenuPrincipalForm` with actual navigation or dashboard features.
-- [ ] Add validation logic for product input (e.g., numeric constraints, required fields).
-- [ ] Consider migrating to a more formal database if the dataset grows.
+1.  **Requisitos:** Tener instalado Visual Studio (2017 o superior) con la carga de trabajo de desarrollo de escritorio de .NET.
+2.  **Restauración de Paquetes:** Asegurarse de que el paquete `Newtonsoft.Json` esté restaurado vía NuGet.
+3.  **Compilación:** Abrir el archivo `.slnx` o `.csproj` en Visual Studio y presionar `F5` o utilizar el botón de "Iniciar".
+
+---
+*Nota: Este archivo fue generado automáticamente para proporcionar contexto al asistente Gemini.*

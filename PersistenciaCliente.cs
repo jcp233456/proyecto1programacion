@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.IO;
+using System.Windows.Forms;
 
 namespace proyecto1programacion
 {
@@ -22,6 +23,7 @@ namespace proyecto1programacion
                 clientes = JsonConvert.DeserializeObject<List<Cliente>>(jsonString);
 
             }
+            
             return clientes;
 
         }

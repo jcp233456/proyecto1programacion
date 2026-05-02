@@ -58,18 +58,28 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBoxNit = new System.Windows.Forms.TextBox();
-            this.textBoxNombreCliente = new System.Windows.Forms.TextBox();
-            this.textBoxApellidoCliente = new System.Windows.Forms.TextBox();
-            this.textBoxDireccionCliente = new System.Windows.Forms.TextBox();
-            this.textBoxTelefonoCliente = new System.Windows.Forms.TextBox();
             this.buttonIngresoCliente = new System.Windows.Forms.Button();
+            this.textBoxTelefonoCliente = new System.Windows.Forms.TextBox();
+            this.textBoxDireccionCliente = new System.Windows.Forms.TextBox();
+            this.textBoxApellidoCliente = new System.Windows.Forms.TextBox();
+            this.textBoxNombreCliente = new System.Windows.Forms.TextBox();
+            this.textBoxNit = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.checkBoxEntregado = new System.Windows.Forms.CheckBox();
+            this.checkBoxNoEntregado = new System.Windows.Forms.CheckBox();
+            this.textBoxVentaCantidad = new System.Windows.Forms.TextBox();
+            this.buttonVenta = new System.Windows.Forms.Button();
+            this.comboBoxVentaNit = new System.Windows.Forms.ComboBox();
+            this.comboBoxVentaProducto = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -84,6 +94,7 @@
             this.tabPage2.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -388,51 +399,50 @@
             this.tabPage5.Text = "Registrar cliente";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // tabPage6
+            // buttonIngresoCliente
             // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(950, 371);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "Venta";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.buttonIngresoCliente.Location = new System.Drawing.Point(545, 111);
+            this.buttonIngresoCliente.Name = "buttonIngresoCliente";
+            this.buttonIngresoCliente.Size = new System.Drawing.Size(315, 77);
+            this.buttonIngresoCliente.TabIndex = 10;
+            this.buttonIngresoCliente.Text = "Registrar Cliente";
+            this.buttonIngresoCliente.UseVisualStyleBackColor = true;
+            this.buttonIngresoCliente.Click += new System.EventHandler(this.buttonIngresoCliente_Click);
             // 
-            // label11
+            // textBoxTelefonoCliente
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(42, 21);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(29, 16);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "NIT";
+            this.textBoxTelefonoCliente.Location = new System.Drawing.Point(187, 267);
+            this.textBoxTelefonoCliente.Name = "textBoxTelefonoCliente";
+            this.textBoxTelefonoCliente.Size = new System.Drawing.Size(184, 22);
+            this.textBoxTelefonoCliente.TabIndex = 9;
             // 
-            // label12
+            // textBoxDireccionCliente
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(42, 73);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 16);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Nombre";
+            this.textBoxDireccionCliente.Location = new System.Drawing.Point(187, 204);
+            this.textBoxDireccionCliente.Name = "textBoxDireccionCliente";
+            this.textBoxDireccionCliente.Size = new System.Drawing.Size(184, 22);
+            this.textBoxDireccionCliente.TabIndex = 8;
             // 
-            // label13
+            // textBoxApellidoCliente
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(43, 138);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(57, 16);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Apellido";
+            this.textBoxApellidoCliente.Location = new System.Drawing.Point(187, 138);
+            this.textBoxApellidoCliente.Name = "textBoxApellidoCliente";
+            this.textBoxApellidoCliente.Size = new System.Drawing.Size(184, 22);
+            this.textBoxApellidoCliente.TabIndex = 7;
             // 
-            // label14
+            // textBoxNombreCliente
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(42, 190);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(64, 16);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Direccion";
+            this.textBoxNombreCliente.Location = new System.Drawing.Point(187, 73);
+            this.textBoxNombreCliente.Name = "textBoxNombreCliente";
+            this.textBoxNombreCliente.Size = new System.Drawing.Size(184, 22);
+            this.textBoxNombreCliente.TabIndex = 6;
+            // 
+            // textBoxNit
+            // 
+            this.textBoxNit.Location = new System.Drawing.Point(187, 21);
+            this.textBoxNit.Name = "textBoxNit";
+            this.textBoxNit.Size = new System.Drawing.Size(184, 22);
+            this.textBoxNit.TabIndex = 5;
             // 
             // label15
             // 
@@ -443,50 +453,150 @@
             this.label15.TabIndex = 4;
             this.label15.Text = "Telefono";
             // 
-            // textBoxNit
+            // label14
             // 
-            this.textBoxNit.Location = new System.Drawing.Point(187, 21);
-            this.textBoxNit.Name = "textBoxNit";
-            this.textBoxNit.Size = new System.Drawing.Size(184, 22);
-            this.textBoxNit.TabIndex = 5;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(42, 190);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(64, 16);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Direccion";
             // 
-            // textBoxNombreCliente
+            // label13
             // 
-            this.textBoxNombreCliente.Location = new System.Drawing.Point(187, 73);
-            this.textBoxNombreCliente.Name = "textBoxNombreCliente";
-            this.textBoxNombreCliente.Size = new System.Drawing.Size(184, 22);
-            this.textBoxNombreCliente.TabIndex = 6;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(43, 138);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(57, 16);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Apellido";
             // 
-            // textBoxApellidoCliente
+            // label12
             // 
-            this.textBoxApellidoCliente.Location = new System.Drawing.Point(187, 138);
-            this.textBoxApellidoCliente.Name = "textBoxApellidoCliente";
-            this.textBoxApellidoCliente.Size = new System.Drawing.Size(184, 22);
-            this.textBoxApellidoCliente.TabIndex = 7;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(42, 73);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 16);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Nombre";
             // 
-            // textBoxDireccionCliente
+            // label11
             // 
-            this.textBoxDireccionCliente.Location = new System.Drawing.Point(187, 204);
-            this.textBoxDireccionCliente.Name = "textBoxDireccionCliente";
-            this.textBoxDireccionCliente.Size = new System.Drawing.Size(184, 22);
-            this.textBoxDireccionCliente.TabIndex = 8;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(42, 21);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(29, 16);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "NIT";
             // 
-            // textBoxTelefonoCliente
+            // tabPage6
             // 
-            this.textBoxTelefonoCliente.Location = new System.Drawing.Point(187, 267);
-            this.textBoxTelefonoCliente.Name = "textBoxTelefonoCliente";
-            this.textBoxTelefonoCliente.Size = new System.Drawing.Size(184, 22);
-            this.textBoxTelefonoCliente.TabIndex = 9;
+            this.tabPage6.Controls.Add(this.comboBoxVentaProducto);
+            this.tabPage6.Controls.Add(this.comboBoxVentaNit);
+            this.tabPage6.Controls.Add(this.buttonVenta);
+            this.tabPage6.Controls.Add(this.textBoxVentaCantidad);
+            this.tabPage6.Controls.Add(this.checkBoxNoEntregado);
+            this.tabPage6.Controls.Add(this.checkBoxEntregado);
+            this.tabPage6.Controls.Add(this.label20);
+            this.tabPage6.Controls.Add(this.label19);
+            this.tabPage6.Controls.Add(this.label17);
+            this.tabPage6.Controls.Add(this.label16);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(950, 371);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "Venta";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // buttonIngresoCliente
+            // label16
             // 
-            this.buttonIngresoCliente.Location = new System.Drawing.Point(545, 111);
-            this.buttonIngresoCliente.Name = "buttonIngresoCliente";
-            this.buttonIngresoCliente.Size = new System.Drawing.Size(315, 77);
-            this.buttonIngresoCliente.TabIndex = 10;
-            this.buttonIngresoCliente.Text = "Registrar Cliente";
-            this.buttonIngresoCliente.UseVisualStyleBackColor = true;
-            this.buttonIngresoCliente.Click += new System.EventHandler(this.buttonIngresoCliente_Click);
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(46, 124);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(60, 16);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "producto";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(46, 32);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(65, 16);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Nit cliente";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(46, 218);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(119, 16);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "Estado de la venta";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(46, 86);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(59, 16);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "cantidad";
+            // 
+            // checkBoxEntregado
+            // 
+            this.checkBoxEntregado.AutoSize = true;
+            this.checkBoxEntregado.Location = new System.Drawing.Point(239, 218);
+            this.checkBoxEntregado.Name = "checkBoxEntregado";
+            this.checkBoxEntregado.Size = new System.Drawing.Size(94, 20);
+            this.checkBoxEntregado.TabIndex = 5;
+            this.checkBoxEntregado.Text = "entregado ";
+            this.checkBoxEntregado.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxNoEntregado
+            // 
+            this.checkBoxNoEntregado.AutoSize = true;
+            this.checkBoxNoEntregado.Location = new System.Drawing.Point(450, 217);
+            this.checkBoxNoEntregado.Name = "checkBoxNoEntregado";
+            this.checkBoxNoEntregado.Size = new System.Drawing.Size(115, 20);
+            this.checkBoxNoEntregado.TabIndex = 6;
+            this.checkBoxNoEntregado.Text = "No entregado ";
+            this.checkBoxNoEntregado.UseVisualStyleBackColor = true;
+            // 
+            // textBoxVentaCantidad
+            // 
+            this.textBoxVentaCantidad.Location = new System.Drawing.Point(195, 80);
+            this.textBoxVentaCantidad.Name = "textBoxVentaCantidad";
+            this.textBoxVentaCantidad.Size = new System.Drawing.Size(138, 22);
+            this.textBoxVentaCantidad.TabIndex = 8;
+            // 
+            // buttonVenta
+            // 
+            this.buttonVenta.Location = new System.Drawing.Point(691, 125);
+            this.buttonVenta.Name = "buttonVenta";
+            this.buttonVenta.Size = new System.Drawing.Size(173, 55);
+            this.buttonVenta.TabIndex = 10;
+            this.buttonVenta.Text = "Registrar venta";
+            this.buttonVenta.UseVisualStyleBackColor = true;
+            this.buttonVenta.Click += new System.EventHandler(this.buttonVenta_Click);
+            // 
+            // comboBoxVentaNit
+            // 
+            this.comboBoxVentaNit.FormattingEnabled = true;
+            this.comboBoxVentaNit.Location = new System.Drawing.Point(195, 29);
+            this.comboBoxVentaNit.Name = "comboBoxVentaNit";
+            this.comboBoxVentaNit.Size = new System.Drawing.Size(130, 24);
+            this.comboBoxVentaNit.TabIndex = 11;
+            // 
+            // comboBoxVentaProducto
+            // 
+            this.comboBoxVentaProducto.FormattingEnabled = true;
+            this.comboBoxVentaProducto.Location = new System.Drawing.Point(203, 141);
+            this.comboBoxVentaProducto.Name = "comboBoxVentaProducto";
+            this.comboBoxVentaProducto.Size = new System.Drawing.Size(130, 24);
+            this.comboBoxVentaProducto.TabIndex = 12;
             // 
             // Form1
             // 
@@ -513,6 +623,8 @@
             this.tabControl3.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -561,6 +673,16 @@
         private System.Windows.Forms.TextBox textBoxTelefonoCliente;
         private System.Windows.Forms.TextBox textBoxDireccionCliente;
         private System.Windows.Forms.TextBox textBoxApellidoCliente;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.CheckBox checkBoxEntregado;
+        private System.Windows.Forms.Button buttonVenta;
+        private System.Windows.Forms.TextBox textBoxVentaCantidad;
+        private System.Windows.Forms.CheckBox checkBoxNoEntregado;
+        private System.Windows.Forms.ComboBox comboBoxVentaNit;
+        private System.Windows.Forms.ComboBox comboBoxVentaProducto;
     }
 }
 
