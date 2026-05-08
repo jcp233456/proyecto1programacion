@@ -272,10 +272,42 @@ namespace proyecto1programacion
             }
         }
 
+        
+
         private void Actualizacion_Grid_reportes(List<Reportes_MasVendidos> top)
         {
             DataGrid_Reportes_MasVendidos.DataSource = null;
             DataGrid_Reportes_MasVendidos.DataSource = top;
+        }
+
+        private void button_Reportes_VentasEntreFechas_Click(object sender, EventArgs e)
+        {
+            DateTime Fecha_Inicio = DatePicker_Reportes_Ventas_Inicio.Value.Date;
+            DateTime Fecha_Final = DatePicker_Reportes_Ventas_FINAL.Value.Date;
+
+            int cant_ventas = 0;
+            int productos_vendidos = 0;
+
+            foreach (var item in facturas)
+            {
+                DateTime fecha_factura = item.Fechaventa.Date;
+
+                if ((fecha_factura >= Fecha_Inicio) && (fecha_factura <= Fecha_Final))
+                {
+                    cant_ventas++;
+                    productos_vendidos += Int32.Parse(item.Cantidadproducto);
+                }
+            }
+
+            label_Reportes_VentasEntreFechas_1.Text = "CANTIDAD DE VENTAS REALIZADAS";
+            label_Reportes_VentasEntreFechas_2.Text = "\n" + cant_ventas;
+            label_Reportes_VentasEntreFechas_3.Text = "CANTIDAD DE PRODUCTOS VENDIDOS";
+            label_Reportes_VentasEntreFechas_4.Text = "\n" + productos_vendidos;
+        }
+
+        private void label_Reportes_VentasEntreFechas_3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
