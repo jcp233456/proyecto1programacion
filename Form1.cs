@@ -78,6 +78,20 @@ namespace proyecto1programacion
             }
         }
 
+
+
+
+
+        //REPORTES
+        private void CargaReportes()
+        {
+           Reportes_MasVendidos();
+        }
+        private void Reportes_MasVendidos()
+        {
+
+        }
+
         private void buttonCambiarProducto_Click(object sender, EventArgs e)
         {
             Producto seleccionado = (Producto)comboBox1.SelectedItem;
@@ -97,6 +111,16 @@ namespace proyecto1programacion
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void REPORTES_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void datagrid_Reportes_Mas_vendidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

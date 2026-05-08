@@ -31,7 +31,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.AGREGAR_NUEVO_PRODUCTO = new System.Windows.Forms.TabPage();
             this.buttonIngresoProducto = new System.Windows.Forms.Button();
             this.numericCantidad = new System.Windows.Forms.NumericUpDown();
             this.numericPrecioVenta = new System.Windows.Forms.NumericUpDown();
@@ -45,7 +45,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.EDITAR_PRODUCTO = new System.Windows.Forms.TabPage();
+            this.numericCmbioPrecioCompra = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
             this.buttonCambiarProducto = new System.Windows.Forms.Button();
             this.numericCambioExistencia = new System.Windows.Forms.NumericUpDown();
             this.numericCambioPrecioVenta = new System.Windows.Forms.NumericUpDown();
@@ -53,30 +55,39 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.REPORTES = new System.Windows.Forms.TabPage();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.Mas_Vendidos = new System.Windows.Forms.TabPage();
+            this.Total_Entre_Fechas = new System.Windows.Forms.TabPage();
+            this.Ganancias_entre_fechas = new System.Windows.Forms.TabPage();
+            this.Ventas_Pendientes = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
-            this.numericCmbioPrecioCompra = new System.Windows.Forms.NumericUpDown();
+            this.datagrid_Reportes_Mas_vendidos = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.AGREGAR_NUEVO_PRODUCTO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericPrecioVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeriPrecioCompra)).BeginInit();
-            this.tabPage4.SuspendLayout();
+            this.EDITAR_PRODUCTO.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericCmbioPrecioCompra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioExistencia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioPrecioVenta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericCmbioPrecioCompra)).BeginInit();
+            this.REPORTES.SuspendLayout();
+            this.tabControl3.SuspendLayout();
+            this.Mas_Vendidos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_Reportes_Mas_vendidos)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 35);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1049, 477);
+            this.tabControl1.Size = new System.Drawing.Size(1107, 500);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -85,43 +96,44 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1041, 448);
+            this.tabPage1.Size = new System.Drawing.Size(1099, 471);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "admin";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabControl2
             // 
-            this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Controls.Add(this.AGREGAR_NUEVO_PRODUCTO);
+            this.tabControl2.Controls.Add(this.EDITAR_PRODUCTO);
+            this.tabControl2.Controls.Add(this.REPORTES);
             this.tabControl2.Location = new System.Drawing.Point(6, 17);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(989, 408);
+            this.tabControl2.Size = new System.Drawing.Size(1087, 448);
             this.tabControl2.TabIndex = 0;
             // 
-            // tabPage3
+            // AGREGAR_NUEVO_PRODUCTO
             // 
-            this.tabPage3.Controls.Add(this.buttonIngresoProducto);
-            this.tabPage3.Controls.Add(this.numericCantidad);
-            this.tabPage3.Controls.Add(this.numericPrecioVenta);
-            this.tabPage3.Controls.Add(this.numeriPrecioCompra);
-            this.tabPage3.Controls.Add(this.textBoxMarca);
-            this.tabPage3.Controls.Add(this.textBoxNombre);
-            this.tabPage3.Controls.Add(this.textBoxCodigo);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.label1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(981, 379);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "agregar{";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.AGREGAR_NUEVO_PRODUCTO.Controls.Add(this.buttonIngresoProducto);
+            this.AGREGAR_NUEVO_PRODUCTO.Controls.Add(this.numericCantidad);
+            this.AGREGAR_NUEVO_PRODUCTO.Controls.Add(this.numericPrecioVenta);
+            this.AGREGAR_NUEVO_PRODUCTO.Controls.Add(this.numeriPrecioCompra);
+            this.AGREGAR_NUEVO_PRODUCTO.Controls.Add(this.textBoxMarca);
+            this.AGREGAR_NUEVO_PRODUCTO.Controls.Add(this.textBoxNombre);
+            this.AGREGAR_NUEVO_PRODUCTO.Controls.Add(this.textBoxCodigo);
+            this.AGREGAR_NUEVO_PRODUCTO.Controls.Add(this.label6);
+            this.AGREGAR_NUEVO_PRODUCTO.Controls.Add(this.label5);
+            this.AGREGAR_NUEVO_PRODUCTO.Controls.Add(this.label4);
+            this.AGREGAR_NUEVO_PRODUCTO.Controls.Add(this.label3);
+            this.AGREGAR_NUEVO_PRODUCTO.Controls.Add(this.label2);
+            this.AGREGAR_NUEVO_PRODUCTO.Controls.Add(this.label1);
+            this.AGREGAR_NUEVO_PRODUCTO.Location = new System.Drawing.Point(4, 25);
+            this.AGREGAR_NUEVO_PRODUCTO.Name = "AGREGAR_NUEVO_PRODUCTO";
+            this.AGREGAR_NUEVO_PRODUCTO.Padding = new System.Windows.Forms.Padding(3);
+            this.AGREGAR_NUEVO_PRODUCTO.Size = new System.Drawing.Size(1079, 419);
+            this.AGREGAR_NUEVO_PRODUCTO.TabIndex = 0;
+            this.AGREGAR_NUEVO_PRODUCTO.Text = "Agregar Productos";
+            this.AGREGAR_NUEVO_PRODUCTO.UseVisualStyleBackColor = true;
             // 
             // buttonIngresoProducto
             // 
@@ -231,24 +243,42 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo producto";
             // 
-            // tabPage4
+            // EDITAR_PRODUCTO
             // 
-            this.tabPage4.Controls.Add(this.numericCmbioPrecioCompra);
-            this.tabPage4.Controls.Add(this.label10);
-            this.tabPage4.Controls.Add(this.buttonCambiarProducto);
-            this.tabPage4.Controls.Add(this.numericCambioExistencia);
-            this.tabPage4.Controls.Add(this.numericCambioPrecioVenta);
-            this.tabPage4.Controls.Add(this.label9);
-            this.tabPage4.Controls.Add(this.label8);
-            this.tabPage4.Controls.Add(this.label7);
-            this.tabPage4.Controls.Add(this.comboBox1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(981, 379);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "editar";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.EDITAR_PRODUCTO.Controls.Add(this.numericCmbioPrecioCompra);
+            this.EDITAR_PRODUCTO.Controls.Add(this.label10);
+            this.EDITAR_PRODUCTO.Controls.Add(this.buttonCambiarProducto);
+            this.EDITAR_PRODUCTO.Controls.Add(this.numericCambioExistencia);
+            this.EDITAR_PRODUCTO.Controls.Add(this.numericCambioPrecioVenta);
+            this.EDITAR_PRODUCTO.Controls.Add(this.label9);
+            this.EDITAR_PRODUCTO.Controls.Add(this.label8);
+            this.EDITAR_PRODUCTO.Controls.Add(this.label7);
+            this.EDITAR_PRODUCTO.Controls.Add(this.comboBox1);
+            this.EDITAR_PRODUCTO.Location = new System.Drawing.Point(4, 25);
+            this.EDITAR_PRODUCTO.Name = "EDITAR_PRODUCTO";
+            this.EDITAR_PRODUCTO.Padding = new System.Windows.Forms.Padding(3);
+            this.EDITAR_PRODUCTO.Size = new System.Drawing.Size(1079, 419);
+            this.EDITAR_PRODUCTO.TabIndex = 1;
+            this.EDITAR_PRODUCTO.Text = "Editar Productos";
+            this.EDITAR_PRODUCTO.UseVisualStyleBackColor = true;
+            // 
+            // numericCmbioPrecioCompra
+            // 
+            this.numericCmbioPrecioCompra.DecimalPlaces = 2;
+            this.numericCmbioPrecioCompra.Location = new System.Drawing.Point(328, 138);
+            this.numericCmbioPrecioCompra.Name = "numericCmbioPrecioCompra";
+            this.numericCmbioPrecioCompra.Size = new System.Drawing.Size(208, 22);
+            this.numericCmbioPrecioCompra.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(58, 138);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(96, 16);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "precio Compra";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // buttonCambiarProducto
             // 
@@ -311,33 +341,88 @@
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // REPORTES
+            // 
+            this.REPORTES.Controls.Add(this.tabControl3);
+            this.REPORTES.Location = new System.Drawing.Point(4, 25);
+            this.REPORTES.Name = "REPORTES";
+            this.REPORTES.Size = new System.Drawing.Size(1079, 419);
+            this.REPORTES.TabIndex = 2;
+            this.REPORTES.Text = "Reportes";
+            this.REPORTES.UseVisualStyleBackColor = true;
+            this.REPORTES.Click += new System.EventHandler(this.REPORTES_Click);
+            // 
+            // tabControl3
+            // 
+            this.tabControl3.Controls.Add(this.Mas_Vendidos);
+            this.tabControl3.Controls.Add(this.Total_Entre_Fechas);
+            this.tabControl3.Controls.Add(this.Ganancias_entre_fechas);
+            this.tabControl3.Controls.Add(this.Ventas_Pendientes);
+            this.tabControl3.Location = new System.Drawing.Point(3, 3);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(1073, 413);
+            this.tabControl3.TabIndex = 0;
+            // 
+            // Mas_Vendidos
+            // 
+            this.Mas_Vendidos.Controls.Add(this.datagrid_Reportes_Mas_vendidos);
+            this.Mas_Vendidos.Location = new System.Drawing.Point(4, 25);
+            this.Mas_Vendidos.Name = "Mas_Vendidos";
+            this.Mas_Vendidos.Padding = new System.Windows.Forms.Padding(3);
+            this.Mas_Vendidos.Size = new System.Drawing.Size(1065, 384);
+            this.Mas_Vendidos.TabIndex = 0;
+            this.Mas_Vendidos.Text = " Mas Vendidos";
+            this.Mas_Vendidos.UseVisualStyleBackColor = true;
+            // 
+            // Total_Entre_Fechas
+            // 
+            this.Total_Entre_Fechas.Location = new System.Drawing.Point(4, 25);
+            this.Total_Entre_Fechas.Name = "Total_Entre_Fechas";
+            this.Total_Entre_Fechas.Padding = new System.Windows.Forms.Padding(3);
+            this.Total_Entre_Fechas.Size = new System.Drawing.Size(1065, 384);
+            this.Total_Entre_Fechas.TabIndex = 1;
+            this.Total_Entre_Fechas.Text = "Ventas Entre Fechas";
+            this.Total_Entre_Fechas.UseVisualStyleBackColor = true;
+            // 
+            // Ganancias_entre_fechas
+            // 
+            this.Ganancias_entre_fechas.Location = new System.Drawing.Point(4, 25);
+            this.Ganancias_entre_fechas.Name = "Ganancias_entre_fechas";
+            this.Ganancias_entre_fechas.Size = new System.Drawing.Size(1065, 384);
+            this.Ganancias_entre_fechas.TabIndex = 2;
+            this.Ganancias_entre_fechas.Text = "Ganancia entre Fechas";
+            this.Ganancias_entre_fechas.UseVisualStyleBackColor = true;
+            // 
+            // Ventas_Pendientes
+            // 
+            this.Ventas_Pendientes.Location = new System.Drawing.Point(4, 25);
+            this.Ventas_Pendientes.Name = "Ventas_Pendientes";
+            this.Ventas_Pendientes.Size = new System.Drawing.Size(1065, 384);
+            this.Ventas_Pendientes.TabIndex = 3;
+            this.Ventas_Pendientes.Text = "Ventas pendientes de entrega";
+            this.Ventas_Pendientes.UseVisualStyleBackColor = true;
+            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1041, 448);
+            this.tabPage2.Size = new System.Drawing.Size(1099, 471);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // datagrid_Reportes_Mas_vendidos
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(58, 138);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 16);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "precio Compra";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // numericCmbioPrecioCompra
-            // 
-            this.numericCmbioPrecioCompra.DecimalPlaces = 2;
-            this.numericCmbioPrecioCompra.Location = new System.Drawing.Point(328, 138);
-            this.numericCmbioPrecioCompra.Name = "numericCmbioPrecioCompra";
-            this.numericCmbioPrecioCompra.Size = new System.Drawing.Size(208, 22);
-            this.numericCmbioPrecioCompra.TabIndex = 8;
+            this.datagrid_Reportes_Mas_vendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagrid_Reportes_Mas_vendidos.Location = new System.Drawing.Point(6, 27);
+            this.datagrid_Reportes_Mas_vendidos.Name = "datagrid_Reportes_Mas_vendidos";
+            this.datagrid_Reportes_Mas_vendidos.RowHeadersWidth = 51;
+            this.datagrid_Reportes_Mas_vendidos.RowTemplate.Height = 24;
+            this.datagrid_Reportes_Mas_vendidos.Size = new System.Drawing.Size(1053, 351);
+            this.datagrid_Reportes_Mas_vendidos.TabIndex = 0;
+            this.datagrid_Reportes_Mas_vendidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrid_Reportes_Mas_vendidos_CellContentClick);
             // 
             // Form1
             // 
@@ -350,16 +435,20 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.AGREGAR_NUEVO_PRODUCTO.ResumeLayout(false);
+            this.AGREGAR_NUEVO_PRODUCTO.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericPrecioVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeriPrecioCompra)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.EDITAR_PRODUCTO.ResumeLayout(false);
+            this.EDITAR_PRODUCTO.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericCmbioPrecioCompra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioExistencia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioPrecioVenta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericCmbioPrecioCompra)).EndInit();
+            this.REPORTES.ResumeLayout(false);
+            this.tabControl3.ResumeLayout(false);
+            this.Mas_Vendidos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_Reportes_Mas_vendidos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,8 +458,8 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage AGREGAR_NUEVO_PRODUCTO;
+        private System.Windows.Forms.TabPage EDITAR_PRODUCTO;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxMarca;
@@ -394,6 +483,13 @@
         private System.Windows.Forms.NumericUpDown numericCambioPrecioVenta;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown numericCmbioPrecioCompra;
+        private System.Windows.Forms.TabPage REPORTES;
+        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabPage Mas_Vendidos;
+        private System.Windows.Forms.TabPage Total_Entre_Fechas;
+        private System.Windows.Forms.TabPage Ganancias_entre_fechas;
+        private System.Windows.Forms.TabPage Ventas_Pendientes;
+        private System.Windows.Forms.DataGridView datagrid_Reportes_Mas_vendidos;
     }
 }
 
