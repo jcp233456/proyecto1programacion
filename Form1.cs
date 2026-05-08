@@ -21,6 +21,7 @@ namespace proyecto1programacion
             CargarProductos();
             CargarClientes();
             CargarFacturas();
+            CargarReportes();
 
         }
 
@@ -52,6 +53,9 @@ namespace proyecto1programacion
             comboBox1.DataSource = productos;
             comboBox1.DisplayMember = "Nombre";
             comboBox1.ValueMember = "Codigo";
+
+            actualizarComboBoxCliente();
+            actualizarComboBoxProducto();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -133,6 +137,7 @@ namespace proyecto1programacion
             PersistenciaCliente persistencia = new PersistenciaCliente();
             persistencia.GuardarJson(clientes);
             actualizarComboBoxCliente();
+            actualizarComboBoxProducto();
             MessageBox.Show("Cliente ingresado correctamente.");
 
         }
@@ -218,6 +223,59 @@ namespace proyecto1programacion
             ActualizarComboBox();
 
             MessageBox.Show("Factura registrada y stock actualizado correctamente.");
+
+
+
+            //Guardar Venta Para reportes
+            Reportes_Productos_Mas_vendidos();
+
+        }
+
+
+        //REPORTES *-------------------------------------------------------------------------------------------*
+
+        private void CargarReportes()
+        {
+            Reportes_Productos_Mas_vendidos();
+        }
+
+        private void Reportes_Productos_Mas_vendidos()
+        {
+            List<Reportes_MasVendidos>Lista_masvendidos = new List<Reportes_MasVendidos>();
+
+            for (int i = 0; i < facturas.Count; i++)
+            {
+                bool existe = false;
+
+                for (int j = 0; j < Lista_masvendidos.Count; j++)
+                {
+                    if (facturas[i].Nombreproducto == Lista_masvendidos[j].Nombre)
+                    {
+                        Lista_masvendidos[j].CantidadVendida += decimal.Parse(facturas[i].Cantidadproducto);
+                        existe = true;
+                    }
+                }
+
+                if (existe == false)
+                {
+                    Reportes_MasVendidos nuevo = new Reportes_MasVendidos();
+
+                    nuevo.Nombre = facturas[i].Nombreproducto;
+                    nuevo.CantidadVendida = decimal.Parse(facturas[i].Cantidadproducto);
+
+                    Lista_masvendidos.Add(nuevo);
+                }
+
+                Lista_masvendidos.Sort((a,b) => b.CantidadVendida.CompareTo(a.CantidadVendida));
+
+                Actualizacion_Grid_reportes(Lista_masvendidos);
+            }
+        }
+
+        private void Actualizacion_Grid_reportes(List<Reportes_MasVendidos> top)
+        {
+            DataGrid_Reportes_MasVendidos.DataSource = null;
+            DataGrid_Reportes_MasVendidos.DataSource = top;
         }
     }
 }

@@ -31,7 +31,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.Tab_Nuevo_Producto = new System.Windows.Forms.TabPage();
             this.buttonIngresoProducto = new System.Windows.Forms.Button();
             this.numericCantidad = new System.Windows.Forms.NumericUpDown();
             this.numericPrecioVenta = new System.Windows.Forms.NumericUpDown();
@@ -45,7 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.Tab_Editar_Producto = new System.Windows.Forms.TabPage();
             this.numericCmbioPrecioCompra = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.buttonCambiarProducto = new System.Windows.Forms.Button();
@@ -70,24 +70,31 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.checkBoxEntregado = new System.Windows.Forms.CheckBox();
-            this.checkBoxNoEntregado = new System.Windows.Forms.CheckBox();
-            this.textBoxVentaCantidad = new System.Windows.Forms.TextBox();
-            this.buttonVenta = new System.Windows.Forms.Button();
-            this.comboBoxVentaNit = new System.Windows.Forms.ComboBox();
             this.comboBoxVentaProducto = new System.Windows.Forms.ComboBox();
+            this.comboBoxVentaNit = new System.Windows.Forms.ComboBox();
+            this.buttonVenta = new System.Windows.Forms.Button();
+            this.textBoxVentaCantidad = new System.Windows.Forms.TextBox();
+            this.checkBoxNoEntregado = new System.Windows.Forms.CheckBox();
+            this.checkBoxEntregado = new System.Windows.Forms.CheckBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.Tab_Reportes = new System.Windows.Forms.TabPage();
+            this.tabControl4 = new System.Windows.Forms.TabControl();
+            this.Tab_Reportes_MasVendidos = new System.Windows.Forms.TabPage();
+            this.Tab_Reportes_TotalEntreDosFechas = new System.Windows.Forms.TabPage();
+            this.Tab_Reportes_GananciasEntreFechas = new System.Windows.Forms.TabPage();
+            this.Tab_Reportes_VentasPendientes = new System.Windows.Forms.TabPage();
+            this.DataGrid_Reportes_MasVendidos = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.Tab_Nuevo_Producto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericPrecioVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeriPrecioCompra)).BeginInit();
-            this.tabPage4.SuspendLayout();
+            this.Tab_Editar_Producto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCmbioPrecioCompra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioExistencia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioPrecioVenta)).BeginInit();
@@ -95,16 +102,20 @@
             this.tabControl3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            this.Tab_Reportes.SuspendLayout();
+            this.tabControl4.SuspendLayout();
+            this.Tab_Reportes_MasVendidos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Reportes_MasVendidos)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 35);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1049, 477);
+            this.tabControl1.Size = new System.Drawing.Size(1233, 527);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -113,43 +124,44 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1041, 448);
+            this.tabPage1.Size = new System.Drawing.Size(1225, 498);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "admin";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabControl2
             // 
-            this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Controls.Add(this.Tab_Nuevo_Producto);
+            this.tabControl2.Controls.Add(this.Tab_Editar_Producto);
+            this.tabControl2.Controls.Add(this.Tab_Reportes);
             this.tabControl2.Location = new System.Drawing.Point(6, 17);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(989, 408);
+            this.tabControl2.Size = new System.Drawing.Size(1213, 475);
             this.tabControl2.TabIndex = 0;
             // 
-            // tabPage3
+            // Tab_Nuevo_Producto
             // 
-            this.tabPage3.Controls.Add(this.buttonIngresoProducto);
-            this.tabPage3.Controls.Add(this.numericCantidad);
-            this.tabPage3.Controls.Add(this.numericPrecioVenta);
-            this.tabPage3.Controls.Add(this.numeriPrecioCompra);
-            this.tabPage3.Controls.Add(this.textBoxMarca);
-            this.tabPage3.Controls.Add(this.textBoxNombreProducto);
-            this.tabPage3.Controls.Add(this.textBoxCodigo);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.label1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(981, 379);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "agregar{";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.Tab_Nuevo_Producto.Controls.Add(this.buttonIngresoProducto);
+            this.Tab_Nuevo_Producto.Controls.Add(this.numericCantidad);
+            this.Tab_Nuevo_Producto.Controls.Add(this.numericPrecioVenta);
+            this.Tab_Nuevo_Producto.Controls.Add(this.numeriPrecioCompra);
+            this.Tab_Nuevo_Producto.Controls.Add(this.textBoxMarca);
+            this.Tab_Nuevo_Producto.Controls.Add(this.textBoxNombreProducto);
+            this.Tab_Nuevo_Producto.Controls.Add(this.textBoxCodigo);
+            this.Tab_Nuevo_Producto.Controls.Add(this.label6);
+            this.Tab_Nuevo_Producto.Controls.Add(this.label5);
+            this.Tab_Nuevo_Producto.Controls.Add(this.label4);
+            this.Tab_Nuevo_Producto.Controls.Add(this.label3);
+            this.Tab_Nuevo_Producto.Controls.Add(this.label2);
+            this.Tab_Nuevo_Producto.Controls.Add(this.label1);
+            this.Tab_Nuevo_Producto.Location = new System.Drawing.Point(4, 25);
+            this.Tab_Nuevo_Producto.Name = "Tab_Nuevo_Producto";
+            this.Tab_Nuevo_Producto.Padding = new System.Windows.Forms.Padding(3);
+            this.Tab_Nuevo_Producto.Size = new System.Drawing.Size(1205, 453);
+            this.Tab_Nuevo_Producto.TabIndex = 0;
+            this.Tab_Nuevo_Producto.Text = "Agregar Nuevo Producto";
+            this.Tab_Nuevo_Producto.UseVisualStyleBackColor = true;
             // 
             // buttonIngresoProducto
             // 
@@ -259,24 +271,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo producto";
             // 
-            // tabPage4
+            // Tab_Editar_Producto
             // 
-            this.tabPage4.Controls.Add(this.numericCmbioPrecioCompra);
-            this.tabPage4.Controls.Add(this.label10);
-            this.tabPage4.Controls.Add(this.buttonCambiarProducto);
-            this.tabPage4.Controls.Add(this.numericCambioExistencia);
-            this.tabPage4.Controls.Add(this.numericCambioPrecioVenta);
-            this.tabPage4.Controls.Add(this.label9);
-            this.tabPage4.Controls.Add(this.label8);
-            this.tabPage4.Controls.Add(this.label7);
-            this.tabPage4.Controls.Add(this.comboBox1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(981, 379);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "editar";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.Tab_Editar_Producto.Controls.Add(this.numericCmbioPrecioCompra);
+            this.Tab_Editar_Producto.Controls.Add(this.label10);
+            this.Tab_Editar_Producto.Controls.Add(this.buttonCambiarProducto);
+            this.Tab_Editar_Producto.Controls.Add(this.numericCambioExistencia);
+            this.Tab_Editar_Producto.Controls.Add(this.numericCambioPrecioVenta);
+            this.Tab_Editar_Producto.Controls.Add(this.label9);
+            this.Tab_Editar_Producto.Controls.Add(this.label8);
+            this.Tab_Editar_Producto.Controls.Add(this.label7);
+            this.Tab_Editar_Producto.Controls.Add(this.comboBox1);
+            this.Tab_Editar_Producto.Location = new System.Drawing.Point(4, 25);
+            this.Tab_Editar_Producto.Name = "Tab_Editar_Producto";
+            this.Tab_Editar_Producto.Padding = new System.Windows.Forms.Padding(3);
+            this.Tab_Editar_Producto.Size = new System.Drawing.Size(1205, 453);
+            this.Tab_Editar_Producto.TabIndex = 1;
+            this.Tab_Editar_Producto.Text = "Editar Producto Existente";
+            this.Tab_Editar_Producto.UseVisualStyleBackColor = true;
             // 
             // numericCmbioPrecioCompra
             // 
@@ -363,7 +375,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1041, 448);
+            this.tabPage2.Size = new System.Drawing.Size(1225, 488);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "clientes";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -372,10 +384,10 @@
             // 
             this.tabControl3.Controls.Add(this.tabPage5);
             this.tabControl3.Controls.Add(this.tabPage6);
-            this.tabControl3.Location = new System.Drawing.Point(29, 26);
+            this.tabControl3.Location = new System.Drawing.Point(6, 6);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(958, 400);
+            this.tabControl3.Size = new System.Drawing.Size(1213, 482);
             this.tabControl3.TabIndex = 0;
             // 
             // tabPage5
@@ -394,7 +406,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(950, 371);
+            this.tabPage5.Size = new System.Drawing.Size(1205, 453);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "Registrar cliente";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -509,68 +521,21 @@
             this.tabPage6.Text = "Venta";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // label16
+            // comboBoxVentaProducto
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(46, 124);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 16);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "producto";
+            this.comboBoxVentaProducto.FormattingEnabled = true;
+            this.comboBoxVentaProducto.Location = new System.Drawing.Point(203, 141);
+            this.comboBoxVentaProducto.Name = "comboBoxVentaProducto";
+            this.comboBoxVentaProducto.Size = new System.Drawing.Size(130, 24);
+            this.comboBoxVentaProducto.TabIndex = 12;
             // 
-            // label17
+            // comboBoxVentaNit
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(46, 32);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(65, 16);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Nit cliente";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(46, 218);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(119, 16);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "Estado de la venta";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(46, 86);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(59, 16);
-            this.label20.TabIndex = 4;
-            this.label20.Text = "cantidad";
-            // 
-            // checkBoxEntregado
-            // 
-            this.checkBoxEntregado.AutoSize = true;
-            this.checkBoxEntregado.Location = new System.Drawing.Point(239, 218);
-            this.checkBoxEntregado.Name = "checkBoxEntregado";
-            this.checkBoxEntregado.Size = new System.Drawing.Size(94, 20);
-            this.checkBoxEntregado.TabIndex = 5;
-            this.checkBoxEntregado.Text = "entregado ";
-            this.checkBoxEntregado.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxNoEntregado
-            // 
-            this.checkBoxNoEntregado.AutoSize = true;
-            this.checkBoxNoEntregado.Location = new System.Drawing.Point(450, 217);
-            this.checkBoxNoEntregado.Name = "checkBoxNoEntregado";
-            this.checkBoxNoEntregado.Size = new System.Drawing.Size(115, 20);
-            this.checkBoxNoEntregado.TabIndex = 6;
-            this.checkBoxNoEntregado.Text = "No entregado ";
-            this.checkBoxNoEntregado.UseVisualStyleBackColor = true;
-            // 
-            // textBoxVentaCantidad
-            // 
-            this.textBoxVentaCantidad.Location = new System.Drawing.Point(195, 80);
-            this.textBoxVentaCantidad.Name = "textBoxVentaCantidad";
-            this.textBoxVentaCantidad.Size = new System.Drawing.Size(138, 22);
-            this.textBoxVentaCantidad.TabIndex = 8;
+            this.comboBoxVentaNit.FormattingEnabled = true;
+            this.comboBoxVentaNit.Location = new System.Drawing.Point(195, 29);
+            this.comboBoxVentaNit.Name = "comboBoxVentaNit";
+            this.comboBoxVentaNit.Size = new System.Drawing.Size(130, 24);
+            this.comboBoxVentaNit.TabIndex = 11;
             // 
             // buttonVenta
             // 
@@ -582,40 +547,158 @@
             this.buttonVenta.UseVisualStyleBackColor = true;
             this.buttonVenta.Click += new System.EventHandler(this.buttonVenta_Click);
             // 
-            // comboBoxVentaNit
+            // textBoxVentaCantidad
             // 
-            this.comboBoxVentaNit.FormattingEnabled = true;
-            this.comboBoxVentaNit.Location = new System.Drawing.Point(195, 29);
-            this.comboBoxVentaNit.Name = "comboBoxVentaNit";
-            this.comboBoxVentaNit.Size = new System.Drawing.Size(130, 24);
-            this.comboBoxVentaNit.TabIndex = 11;
+            this.textBoxVentaCantidad.Location = new System.Drawing.Point(195, 80);
+            this.textBoxVentaCantidad.Name = "textBoxVentaCantidad";
+            this.textBoxVentaCantidad.Size = new System.Drawing.Size(138, 22);
+            this.textBoxVentaCantidad.TabIndex = 8;
             // 
-            // comboBoxVentaProducto
+            // checkBoxNoEntregado
             // 
-            this.comboBoxVentaProducto.FormattingEnabled = true;
-            this.comboBoxVentaProducto.Location = new System.Drawing.Point(203, 141);
-            this.comboBoxVentaProducto.Name = "comboBoxVentaProducto";
-            this.comboBoxVentaProducto.Size = new System.Drawing.Size(130, 24);
-            this.comboBoxVentaProducto.TabIndex = 12;
+            this.checkBoxNoEntregado.AutoSize = true;
+            this.checkBoxNoEntregado.Location = new System.Drawing.Point(450, 217);
+            this.checkBoxNoEntregado.Name = "checkBoxNoEntregado";
+            this.checkBoxNoEntregado.Size = new System.Drawing.Size(115, 20);
+            this.checkBoxNoEntregado.TabIndex = 6;
+            this.checkBoxNoEntregado.Text = "No entregado ";
+            this.checkBoxNoEntregado.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxEntregado
+            // 
+            this.checkBoxEntregado.AutoSize = true;
+            this.checkBoxEntregado.Location = new System.Drawing.Point(239, 218);
+            this.checkBoxEntregado.Name = "checkBoxEntregado";
+            this.checkBoxEntregado.Size = new System.Drawing.Size(94, 20);
+            this.checkBoxEntregado.TabIndex = 5;
+            this.checkBoxEntregado.Text = "entregado ";
+            this.checkBoxEntregado.UseVisualStyleBackColor = true;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(46, 86);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(59, 16);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "cantidad";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(46, 218);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(119, 16);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "Estado de la venta";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(46, 32);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(65, 16);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Nit cliente";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(46, 124);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(60, 16);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "producto";
+            // 
+            // Tab_Reportes
+            // 
+            this.Tab_Reportes.Controls.Add(this.tabControl4);
+            this.Tab_Reportes.Location = new System.Drawing.Point(4, 25);
+            this.Tab_Reportes.Name = "Tab_Reportes";
+            this.Tab_Reportes.Size = new System.Drawing.Size(1205, 446);
+            this.Tab_Reportes.TabIndex = 2;
+            this.Tab_Reportes.Text = "Reportes";
+            this.Tab_Reportes.UseVisualStyleBackColor = true;
+            // 
+            // tabControl4
+            // 
+            this.tabControl4.Controls.Add(this.Tab_Reportes_MasVendidos);
+            this.tabControl4.Controls.Add(this.Tab_Reportes_TotalEntreDosFechas);
+            this.tabControl4.Controls.Add(this.Tab_Reportes_GananciasEntreFechas);
+            this.tabControl4.Controls.Add(this.Tab_Reportes_VentasPendientes);
+            this.tabControl4.Location = new System.Drawing.Point(3, 3);
+            this.tabControl4.Name = "tabControl4";
+            this.tabControl4.SelectedIndex = 0;
+            this.tabControl4.Size = new System.Drawing.Size(1199, 437);
+            this.tabControl4.TabIndex = 0;
+            // 
+            // Tab_Reportes_MasVendidos
+            // 
+            this.Tab_Reportes_MasVendidos.Controls.Add(this.DataGrid_Reportes_MasVendidos);
+            this.Tab_Reportes_MasVendidos.Location = new System.Drawing.Point(4, 25);
+            this.Tab_Reportes_MasVendidos.Name = "Tab_Reportes_MasVendidos";
+            this.Tab_Reportes_MasVendidos.Padding = new System.Windows.Forms.Padding(3);
+            this.Tab_Reportes_MasVendidos.Size = new System.Drawing.Size(1191, 408);
+            this.Tab_Reportes_MasVendidos.TabIndex = 0;
+            this.Tab_Reportes_MasVendidos.Text = "Productos Mas Vendidos";
+            this.Tab_Reportes_MasVendidos.UseVisualStyleBackColor = true;
+            // 
+            // Tab_Reportes_TotalEntreDosFechas
+            // 
+            this.Tab_Reportes_TotalEntreDosFechas.Location = new System.Drawing.Point(4, 25);
+            this.Tab_Reportes_TotalEntreDosFechas.Name = "Tab_Reportes_TotalEntreDosFechas";
+            this.Tab_Reportes_TotalEntreDosFechas.Padding = new System.Windows.Forms.Padding(3);
+            this.Tab_Reportes_TotalEntreDosFechas.Size = new System.Drawing.Size(1191, 408);
+            this.Tab_Reportes_TotalEntreDosFechas.TabIndex = 1;
+            this.Tab_Reportes_TotalEntreDosFechas.Text = "Ventas Entre Fechas";
+            this.Tab_Reportes_TotalEntreDosFechas.UseVisualStyleBackColor = true;
+            // 
+            // Tab_Reportes_GananciasEntreFechas
+            // 
+            this.Tab_Reportes_GananciasEntreFechas.Location = new System.Drawing.Point(4, 25);
+            this.Tab_Reportes_GananciasEntreFechas.Name = "Tab_Reportes_GananciasEntreFechas";
+            this.Tab_Reportes_GananciasEntreFechas.Size = new System.Drawing.Size(1191, 408);
+            this.Tab_Reportes_GananciasEntreFechas.TabIndex = 2;
+            this.Tab_Reportes_GananciasEntreFechas.Text = "Ganancia entre dos fechas";
+            this.Tab_Reportes_GananciasEntreFechas.UseVisualStyleBackColor = true;
+            // 
+            // Tab_Reportes_VentasPendientes
+            // 
+            this.Tab_Reportes_VentasPendientes.Location = new System.Drawing.Point(4, 25);
+            this.Tab_Reportes_VentasPendientes.Name = "Tab_Reportes_VentasPendientes";
+            this.Tab_Reportes_VentasPendientes.Size = new System.Drawing.Size(1191, 408);
+            this.Tab_Reportes_VentasPendientes.TabIndex = 3;
+            this.Tab_Reportes_VentasPendientes.Text = "Ventas Pendientes de entrega";
+            this.Tab_Reportes_VentasPendientes.UseVisualStyleBackColor = true;
+            // 
+            // DataGrid_Reportes_MasVendidos
+            // 
+            this.DataGrid_Reportes_MasVendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGrid_Reportes_MasVendidos.Location = new System.Drawing.Point(6, 6);
+            this.DataGrid_Reportes_MasVendidos.Name = "DataGrid_Reportes_MasVendidos";
+            this.DataGrid_Reportes_MasVendidos.RowHeadersWidth = 51;
+            this.DataGrid_Reportes_MasVendidos.RowTemplate.Height = 24;
+            this.DataGrid_Reportes_MasVendidos.Size = new System.Drawing.Size(1179, 396);
+            this.DataGrid_Reportes_MasVendidos.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 524);
+            this.ClientSize = new System.Drawing.Size(1257, 541);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.Tab_Nuevo_Producto.ResumeLayout(false);
+            this.Tab_Nuevo_Producto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericPrecioVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeriPrecioCompra)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.Tab_Editar_Producto.ResumeLayout(false);
+            this.Tab_Editar_Producto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCmbioPrecioCompra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioExistencia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioPrecioVenta)).EndInit();
@@ -625,6 +708,10 @@
             this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            this.Tab_Reportes.ResumeLayout(false);
+            this.tabControl4.ResumeLayout(false);
+            this.Tab_Reportes_MasVendidos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Reportes_MasVendidos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -634,8 +721,8 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage Tab_Nuevo_Producto;
+        private System.Windows.Forms.TabPage Tab_Editar_Producto;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxMarca;
@@ -683,6 +770,13 @@
         private System.Windows.Forms.CheckBox checkBoxNoEntregado;
         private System.Windows.Forms.ComboBox comboBoxVentaNit;
         private System.Windows.Forms.ComboBox comboBoxVentaProducto;
+        private System.Windows.Forms.TabPage Tab_Reportes;
+        private System.Windows.Forms.TabControl tabControl4;
+        private System.Windows.Forms.TabPage Tab_Reportes_MasVendidos;
+        private System.Windows.Forms.TabPage Tab_Reportes_TotalEntreDosFechas;
+        private System.Windows.Forms.TabPage Tab_Reportes_GananciasEntreFechas;
+        private System.Windows.Forms.TabPage Tab_Reportes_VentasPendientes;
+        private System.Windows.Forms.DataGridView DataGrid_Reportes_MasVendidos;
     }
 }
 
