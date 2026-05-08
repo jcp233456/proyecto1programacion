@@ -237,6 +237,7 @@ namespace proyecto1programacion
         private void CargarReportes()
         {
             Reportes_Productos_Mas_vendidos();
+            Reportes_Productos_Pendientes_de_entrega();
         }
 
         private void Reportes_Productos_Mas_vendidos()
@@ -276,8 +277,19 @@ namespace proyecto1programacion
 
         private void Actualizacion_Grid_reportes(List<Reportes_MasVendidos> top)
         {
-            DataGrid_Reportes_MasVendidos.DataSource = null;
-            DataGrid_Reportes_MasVendidos.DataSource = top;
+           
+            if (top.Count == 0)
+            {
+                label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.Text = "NO HAY PRODUCTOS A MOSTRAR";
+            }
+            else
+            {
+                DataGrid_Reportes_MasVendidos.Visible = true;
+                DataGrid_Reportes_MasVendidos.DataSource = null;
+                DataGrid_Reportes_MasVendidos.DataSource = top;
+
+            }
+            
         }
 
         private void button_Reportes_VentasEntreFechas_Click(object sender, EventArgs e)
@@ -344,7 +356,36 @@ namespace proyecto1programacion
 
         }
 
+        private void Reportes_Productos_Pendientes_de_entrega()
+        {
+            List<Reportes_Producto_Por_entregar> lista_producto_entrega = new List<Reportes_Producto_Por_entregar>() ;
+            foreach (var item in facturas)
+            {
+                if (item.Estadoentrega == false)
+                {
+                    Reportes_Producto_Por_entregar nuevo = new Reportes_Producto_Por_entregar();
+                    nuevo.Nitcliente = item.Nitcliente;
+                    nuevo.Codigo_producto = item.Codigoproducto;
+                    nuevo.Nombre_producto = item.Nombreproducto;
+                    nuevo.Estado_producto = item.Estadoentrega;
 
+                    lista_producto_entrega.Add(nuevo);
+                }
+            }
+            datagrid_reportes_ventas_pendientes.DataSource = null;
+            if (lista_producto_entrega.Count==0)
+            {
+                label_reportes_ALERTA_ventas_pendientes.Text = "NO HAY PRODUCTOS POR ENTREGAR";
+            } else
+            {
+                datagrid_reportes_ventas_pendientes.Visible = true;
+                datagrid_reportes_ventas_pendientes.DataSource = lista_producto_entrega;
+
+            }
+
+
+
+        }
 
 
 

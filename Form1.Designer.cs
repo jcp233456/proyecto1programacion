@@ -71,6 +71,8 @@
             this.DatePicker_Reportes_Ventas_FINAL = new System.Windows.Forms.DateTimePicker();
             this.DatePicker_Reportes_Ventas_Inicio = new System.Windows.Forms.DateTimePicker();
             this.Tab_Reportes_GananciasEntreFechas = new System.Windows.Forms.TabPage();
+            this.Label_reporte_ganancia_2 = new System.Windows.Forms.Label();
+            this.Label_reporte_ganancia_1 = new System.Windows.Forms.Label();
             this.button_reporte_Ganancias = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -78,6 +80,7 @@
             this.datepicker_reportes_ganancias_final = new System.Windows.Forms.DateTimePicker();
             this.datepicker_reportes_ganancias_inicio = new System.Windows.Forms.DateTimePicker();
             this.Tab_Reportes_VentasPendientes = new System.Windows.Forms.TabPage();
+            this.datagrid_reportes_ventas_pendientes = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -103,8 +106,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.Label_reporte_ganancia_1 = new System.Windows.Forms.Label();
-            this.Label_reporte_ganancia_2 = new System.Windows.Forms.Label();
+            this.label_reportes_ALERTA_ventas_pendientes = new System.Windows.Forms.Label();
+            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -122,6 +125,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Reportes_MasVendidos)).BeginInit();
             this.Tab_Reportes_TotalEntreDosFechas.SuspendLayout();
             this.Tab_Reportes_GananciasEntreFechas.SuspendLayout();
+            this.Tab_Reportes_VentasPendientes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_reportes_ventas_pendientes)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -413,6 +418,7 @@
             // 
             // Tab_Reportes_MasVendidos
             // 
+            this.Tab_Reportes_MasVendidos.Controls.Add(this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS);
             this.Tab_Reportes_MasVendidos.Controls.Add(this.DataGrid_Reportes_MasVendidos);
             this.Tab_Reportes_MasVendidos.Location = new System.Drawing.Point(4, 25);
             this.Tab_Reportes_MasVendidos.Name = "Tab_Reportes_MasVendidos";
@@ -429,8 +435,9 @@
             this.DataGrid_Reportes_MasVendidos.Name = "DataGrid_Reportes_MasVendidos";
             this.DataGrid_Reportes_MasVendidos.RowHeadersWidth = 51;
             this.DataGrid_Reportes_MasVendidos.RowTemplate.Height = 24;
-            this.DataGrid_Reportes_MasVendidos.Size = new System.Drawing.Size(1179, 396);
+            this.DataGrid_Reportes_MasVendidos.Size = new System.Drawing.Size(1179, 359);
             this.DataGrid_Reportes_MasVendidos.TabIndex = 0;
+            this.DataGrid_Reportes_MasVendidos.Visible = false;
             // 
             // Tab_Reportes_TotalEntreDosFechas
             // 
@@ -559,6 +566,24 @@
             this.Tab_Reportes_GananciasEntreFechas.Text = "Ganancia entre dos fechas";
             this.Tab_Reportes_GananciasEntreFechas.UseVisualStyleBackColor = true;
             // 
+            // Label_reporte_ganancia_2
+            // 
+            this.Label_reporte_ganancia_2.AutoSize = true;
+            this.Label_reporte_ganancia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_reporte_ganancia_2.Location = new System.Drawing.Point(767, 193);
+            this.Label_reporte_ganancia_2.Name = "Label_reporte_ganancia_2";
+            this.Label_reporte_ganancia_2.Size = new System.Drawing.Size(0, 32);
+            this.Label_reporte_ganancia_2.TabIndex = 13;
+            // 
+            // Label_reporte_ganancia_1
+            // 
+            this.Label_reporte_ganancia_1.AutoSize = true;
+            this.Label_reporte_ganancia_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_reporte_ganancia_1.Location = new System.Drawing.Point(707, 140);
+            this.Label_reporte_ganancia_1.Name = "Label_reporte_ganancia_1";
+            this.Label_reporte_ganancia_1.Size = new System.Drawing.Size(0, 32);
+            this.Label_reporte_ganancia_1.TabIndex = 12;
+            // 
             // button_reporte_Ganancias
             // 
             this.button_reporte_Ganancias.Location = new System.Drawing.Point(236, 289);
@@ -617,12 +642,25 @@
             // 
             // Tab_Reportes_VentasPendientes
             // 
+            this.Tab_Reportes_VentasPendientes.Controls.Add(this.label_reportes_ALERTA_ventas_pendientes);
+            this.Tab_Reportes_VentasPendientes.Controls.Add(this.datagrid_reportes_ventas_pendientes);
             this.Tab_Reportes_VentasPendientes.Location = new System.Drawing.Point(4, 25);
             this.Tab_Reportes_VentasPendientes.Name = "Tab_Reportes_VentasPendientes";
             this.Tab_Reportes_VentasPendientes.Size = new System.Drawing.Size(1191, 408);
             this.Tab_Reportes_VentasPendientes.TabIndex = 3;
             this.Tab_Reportes_VentasPendientes.Text = "Ventas Pendientes de entrega";
             this.Tab_Reportes_VentasPendientes.UseVisualStyleBackColor = true;
+            // 
+            // datagrid_reportes_ventas_pendientes
+            // 
+            this.datagrid_reportes_ventas_pendientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagrid_reportes_ventas_pendientes.Location = new System.Drawing.Point(3, 3);
+            this.datagrid_reportes_ventas_pendientes.Name = "datagrid_reportes_ventas_pendientes";
+            this.datagrid_reportes_ventas_pendientes.RowHeadersWidth = 51;
+            this.datagrid_reportes_ventas_pendientes.RowTemplate.Height = 24;
+            this.datagrid_reportes_ventas_pendientes.Size = new System.Drawing.Size(1185, 362);
+            this.datagrid_reportes_ventas_pendientes.TabIndex = 0;
+            this.datagrid_reportes_ventas_pendientes.Visible = false;
             // 
             // tabPage2
             // 
@@ -865,23 +903,24 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "producto";
             // 
-            // Label_reporte_ganancia_1
+            // label_reportes_ALERTA_ventas_pendientes
             // 
-            this.Label_reporte_ganancia_1.AutoSize = true;
-            this.Label_reporte_ganancia_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_reporte_ganancia_1.Location = new System.Drawing.Point(707, 140);
-            this.Label_reporte_ganancia_1.Name = "Label_reporte_ganancia_1";
-            this.Label_reporte_ganancia_1.Size = new System.Drawing.Size(0, 32);
-            this.Label_reporte_ganancia_1.TabIndex = 12;
+            this.label_reportes_ALERTA_ventas_pendientes.AutoSize = true;
+            this.label_reportes_ALERTA_ventas_pendientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_reportes_ALERTA_ventas_pendientes.Location = new System.Drawing.Point(373, 368);
+            this.label_reportes_ALERTA_ventas_pendientes.Name = "label_reportes_ALERTA_ventas_pendientes";
+            this.label_reportes_ALERTA_ventas_pendientes.Size = new System.Drawing.Size(0, 32);
+            this.label_reportes_ALERTA_ventas_pendientes.TabIndex = 1;
+            this.label_reportes_ALERTA_ventas_pendientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Label_reporte_ganancia_2
+            // label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS
             // 
-            this.Label_reporte_ganancia_2.AutoSize = true;
-            this.Label_reporte_ganancia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_reporte_ganancia_2.Location = new System.Drawing.Point(767, 193);
-            this.Label_reporte_ganancia_2.Name = "Label_reporte_ganancia_2";
-            this.Label_reporte_ganancia_2.Size = new System.Drawing.Size(0, 32);
-            this.Label_reporte_ganancia_2.TabIndex = 13;
+            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.AutoSize = true;
+            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.Location = new System.Drawing.Point(325, 373);
+            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.Name = "label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS";
+            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.Size = new System.Drawing.Size(0, 32);
+            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.TabIndex = 1;
             // 
             // Form1
             // 
@@ -907,11 +946,15 @@
             this.Tab_Reportes.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
             this.Tab_Reportes_MasVendidos.ResumeLayout(false);
+            this.Tab_Reportes_MasVendidos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Reportes_MasVendidos)).EndInit();
             this.Tab_Reportes_TotalEntreDosFechas.ResumeLayout(false);
             this.Tab_Reportes_TotalEntreDosFechas.PerformLayout();
             this.Tab_Reportes_GananciasEntreFechas.ResumeLayout(false);
             this.Tab_Reportes_GananciasEntreFechas.PerformLayout();
+            this.Tab_Reportes_VentasPendientes.ResumeLayout(false);
+            this.Tab_Reportes_VentasPendientes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_reportes_ventas_pendientes)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
@@ -1001,6 +1044,9 @@
         private System.Windows.Forms.DateTimePicker datepicker_reportes_ganancias_inicio;
         private System.Windows.Forms.Label Label_reporte_ganancia_2;
         private System.Windows.Forms.Label Label_reporte_ganancia_1;
+        private System.Windows.Forms.DataGridView datagrid_reportes_ventas_pendientes;
+        private System.Windows.Forms.Label label_reportes_ALERTA_ventas_pendientes;
+        private System.Windows.Forms.Label label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS;
     }
 }
 
