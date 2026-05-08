@@ -102,6 +102,20 @@ namespace proyecto1programacion
             }
         }
 
+
+
+
+
+        //REPORTES
+        private void CargaReportes()
+        {
+           Reportes_MasVendidos();
+        }
+        private void Reportes_MasVendidos()
+        {
+
+        }
+
         private void buttonCambiarProducto_Click(object sender, EventArgs e)
         {
             Producto seleccionado = (Producto)comboBox1.SelectedItem;
