@@ -55,6 +55,29 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Tab_Reportes = new System.Windows.Forms.TabPage();
+            this.tabControl4 = new System.Windows.Forms.TabControl();
+            this.Tab_Reportes_MasVendidos = new System.Windows.Forms.TabPage();
+            this.DataGrid_Reportes_MasVendidos = new System.Windows.Forms.DataGridView();
+            this.Tab_Reportes_TotalEntreDosFechas = new System.Windows.Forms.TabPage();
+            this.label_Reportes_VentasEntreFechas_4 = new System.Windows.Forms.Label();
+            this.label_Reportes_VentasEntreFechas_3 = new System.Windows.Forms.Label();
+            this.label_Reportes_VentasEntreFechas_2 = new System.Windows.Forms.Label();
+            this.label_Reportes_VentasEntreFechas_1 = new System.Windows.Forms.Label();
+            this.button_Reportes_VentasEntreFechas = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.DatePicker_Reportes_Ventas_FINAL = new System.Windows.Forms.DateTimePicker();
+            this.DatePicker_Reportes_Ventas_Inicio = new System.Windows.Forms.DateTimePicker();
+            this.Tab_Reportes_GananciasEntreFechas = new System.Windows.Forms.TabPage();
+            this.button_reporte_Ganancias = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.datepicker_reportes_ganancias_final = new System.Windows.Forms.DateTimePicker();
+            this.datepicker_reportes_ganancias_inicio = new System.Windows.Forms.DateTimePicker();
+            this.Tab_Reportes_VentasPendientes = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -80,23 +103,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.Tab_Reportes = new System.Windows.Forms.TabPage();
-            this.tabControl4 = new System.Windows.Forms.TabControl();
-            this.Tab_Reportes_MasVendidos = new System.Windows.Forms.TabPage();
-            this.Tab_Reportes_TotalEntreDosFechas = new System.Windows.Forms.TabPage();
-            this.Tab_Reportes_GananciasEntreFechas = new System.Windows.Forms.TabPage();
-            this.Tab_Reportes_VentasPendientes = new System.Windows.Forms.TabPage();
-            this.DataGrid_Reportes_MasVendidos = new System.Windows.Forms.DataGridView();
-            this.DatePicker_Reportes_Ventas_Inicio = new System.Windows.Forms.DateTimePicker();
-            this.DatePicker_Reportes_Ventas_FINAL = new System.Windows.Forms.DateTimePicker();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.button_Reportes_VentasEntreFechas = new System.Windows.Forms.Button();
-            this.label_Reportes_VentasEntreFechas_1 = new System.Windows.Forms.Label();
-            this.label_Reportes_VentasEntreFechas_2 = new System.Windows.Forms.Label();
-            this.label_Reportes_VentasEntreFechas_3 = new System.Windows.Forms.Label();
-            this.label_Reportes_VentasEntreFechas_4 = new System.Windows.Forms.Label();
+            this.Label_reporte_ganancia_1 = new System.Windows.Forms.Label();
+            this.Label_reporte_ganancia_2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -108,15 +116,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericCmbioPrecioCompra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioExistencia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioPrecioVenta)).BeginInit();
+            this.Tab_Reportes.SuspendLayout();
+            this.tabControl4.SuspendLayout();
+            this.Tab_Reportes_MasVendidos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Reportes_MasVendidos)).BeginInit();
+            this.Tab_Reportes_TotalEntreDosFechas.SuspendLayout();
+            this.Tab_Reportes_GananciasEntreFechas.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.Tab_Reportes.SuspendLayout();
-            this.tabControl4.SuspendLayout();
-            this.Tab_Reportes_MasVendidos.SuspendLayout();
-            this.Tab_Reportes_TotalEntreDosFechas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Reportes_MasVendidos)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -296,7 +305,7 @@
             this.Tab_Editar_Producto.Location = new System.Drawing.Point(4, 25);
             this.Tab_Editar_Producto.Name = "Tab_Editar_Producto";
             this.Tab_Editar_Producto.Padding = new System.Windows.Forms.Padding(3);
-            this.Tab_Editar_Producto.Size = new System.Drawing.Size(1205, 453);
+            this.Tab_Editar_Producto.Size = new System.Drawing.Size(1205, 446);
             this.Tab_Editar_Producto.TabIndex = 1;
             this.Tab_Editar_Producto.Text = "Editar Producto Existente";
             this.Tab_Editar_Producto.UseVisualStyleBackColor = true;
@@ -379,6 +388,241 @@
             this.comboBox1.Size = new System.Drawing.Size(226, 24);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // Tab_Reportes
+            // 
+            this.Tab_Reportes.Controls.Add(this.tabControl4);
+            this.Tab_Reportes.Location = new System.Drawing.Point(4, 25);
+            this.Tab_Reportes.Name = "Tab_Reportes";
+            this.Tab_Reportes.Size = new System.Drawing.Size(1205, 446);
+            this.Tab_Reportes.TabIndex = 2;
+            this.Tab_Reportes.Text = "Reportes";
+            this.Tab_Reportes.UseVisualStyleBackColor = true;
+            // 
+            // tabControl4
+            // 
+            this.tabControl4.Controls.Add(this.Tab_Reportes_MasVendidos);
+            this.tabControl4.Controls.Add(this.Tab_Reportes_TotalEntreDosFechas);
+            this.tabControl4.Controls.Add(this.Tab_Reportes_GananciasEntreFechas);
+            this.tabControl4.Controls.Add(this.Tab_Reportes_VentasPendientes);
+            this.tabControl4.Location = new System.Drawing.Point(3, 3);
+            this.tabControl4.Name = "tabControl4";
+            this.tabControl4.SelectedIndex = 0;
+            this.tabControl4.Size = new System.Drawing.Size(1199, 437);
+            this.tabControl4.TabIndex = 0;
+            // 
+            // Tab_Reportes_MasVendidos
+            // 
+            this.Tab_Reportes_MasVendidos.Controls.Add(this.DataGrid_Reportes_MasVendidos);
+            this.Tab_Reportes_MasVendidos.Location = new System.Drawing.Point(4, 25);
+            this.Tab_Reportes_MasVendidos.Name = "Tab_Reportes_MasVendidos";
+            this.Tab_Reportes_MasVendidos.Padding = new System.Windows.Forms.Padding(3);
+            this.Tab_Reportes_MasVendidos.Size = new System.Drawing.Size(1191, 408);
+            this.Tab_Reportes_MasVendidos.TabIndex = 0;
+            this.Tab_Reportes_MasVendidos.Text = "Productos Mas Vendidos";
+            this.Tab_Reportes_MasVendidos.UseVisualStyleBackColor = true;
+            // 
+            // DataGrid_Reportes_MasVendidos
+            // 
+            this.DataGrid_Reportes_MasVendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGrid_Reportes_MasVendidos.Location = new System.Drawing.Point(6, 6);
+            this.DataGrid_Reportes_MasVendidos.Name = "DataGrid_Reportes_MasVendidos";
+            this.DataGrid_Reportes_MasVendidos.RowHeadersWidth = 51;
+            this.DataGrid_Reportes_MasVendidos.RowTemplate.Height = 24;
+            this.DataGrid_Reportes_MasVendidos.Size = new System.Drawing.Size(1179, 396);
+            this.DataGrid_Reportes_MasVendidos.TabIndex = 0;
+            // 
+            // Tab_Reportes_TotalEntreDosFechas
+            // 
+            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.label_Reportes_VentasEntreFechas_4);
+            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.label_Reportes_VentasEntreFechas_3);
+            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.label_Reportes_VentasEntreFechas_2);
+            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.label_Reportes_VentasEntreFechas_1);
+            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.button_Reportes_VentasEntreFechas);
+            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.label22);
+            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.label21);
+            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.label18);
+            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.DatePicker_Reportes_Ventas_FINAL);
+            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.DatePicker_Reportes_Ventas_Inicio);
+            this.Tab_Reportes_TotalEntreDosFechas.Location = new System.Drawing.Point(4, 25);
+            this.Tab_Reportes_TotalEntreDosFechas.Name = "Tab_Reportes_TotalEntreDosFechas";
+            this.Tab_Reportes_TotalEntreDosFechas.Padding = new System.Windows.Forms.Padding(3);
+            this.Tab_Reportes_TotalEntreDosFechas.Size = new System.Drawing.Size(1191, 408);
+            this.Tab_Reportes_TotalEntreDosFechas.TabIndex = 1;
+            this.Tab_Reportes_TotalEntreDosFechas.Text = "Ventas Entre Fechas";
+            this.Tab_Reportes_TotalEntreDosFechas.UseVisualStyleBackColor = true;
+            // 
+            // label_Reportes_VentasEntreFechas_4
+            // 
+            this.label_Reportes_VentasEntreFechas_4.AutoSize = true;
+            this.label_Reportes_VentasEntreFechas_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Reportes_VentasEntreFechas_4.Location = new System.Drawing.Point(750, 227);
+            this.label_Reportes_VentasEntreFechas_4.Name = "label_Reportes_VentasEntreFechas_4";
+            this.label_Reportes_VentasEntreFechas_4.Size = new System.Drawing.Size(0, 42);
+            this.label_Reportes_VentasEntreFechas_4.TabIndex = 9;
+            // 
+            // label_Reportes_VentasEntreFechas_3
+            // 
+            this.label_Reportes_VentasEntreFechas_3.AutoSize = true;
+            this.label_Reportes_VentasEntreFechas_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Reportes_VentasEntreFechas_3.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label_Reportes_VentasEntreFechas_3.Location = new System.Drawing.Point(636, 185);
+            this.label_Reportes_VentasEntreFechas_3.Name = "label_Reportes_VentasEntreFechas_3";
+            this.label_Reportes_VentasEntreFechas_3.Size = new System.Drawing.Size(0, 29);
+            this.label_Reportes_VentasEntreFechas_3.TabIndex = 8;
+            this.label_Reportes_VentasEntreFechas_3.Click += new System.EventHandler(this.label_Reportes_VentasEntreFechas_3_Click);
+            // 
+            // label_Reportes_VentasEntreFechas_2
+            // 
+            this.label_Reportes_VentasEntreFechas_2.AutoSize = true;
+            this.label_Reportes_VentasEntreFechas_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Reportes_VentasEntreFechas_2.Location = new System.Drawing.Point(750, 92);
+            this.label_Reportes_VentasEntreFechas_2.Name = "label_Reportes_VentasEntreFechas_2";
+            this.label_Reportes_VentasEntreFechas_2.Size = new System.Drawing.Size(0, 42);
+            this.label_Reportes_VentasEntreFechas_2.TabIndex = 7;
+            // 
+            // label_Reportes_VentasEntreFechas_1
+            // 
+            this.label_Reportes_VentasEntreFechas_1.AutoSize = true;
+            this.label_Reportes_VentasEntreFechas_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Reportes_VentasEntreFechas_1.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label_Reportes_VentasEntreFechas_1.Location = new System.Drawing.Point(636, 33);
+            this.label_Reportes_VentasEntreFechas_1.Name = "label_Reportes_VentasEntreFechas_1";
+            this.label_Reportes_VentasEntreFechas_1.Size = new System.Drawing.Size(0, 29);
+            this.label_Reportes_VentasEntreFechas_1.TabIndex = 6;
+            // 
+            // button_Reportes_VentasEntreFechas
+            // 
+            this.button_Reportes_VentasEntreFechas.Location = new System.Drawing.Point(220, 295);
+            this.button_Reportes_VentasEntreFechas.Name = "button_Reportes_VentasEntreFechas";
+            this.button_Reportes_VentasEntreFechas.Size = new System.Drawing.Size(281, 91);
+            this.button_Reportes_VentasEntreFechas.TabIndex = 5;
+            this.button_Reportes_VentasEntreFechas.Text = "MOSTRAR VENTAS";
+            this.button_Reportes_VentasEntreFechas.UseVisualStyleBackColor = true;
+            this.button_Reportes_VentasEntreFechas.Click += new System.EventHandler(this.button_Reportes_VentasEntreFechas_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(169, 185);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(92, 16);
+            this.label22.TabIndex = 4;
+            this.label22.Text = "FECHA FINAL";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(166, 73);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(99, 16);
+            this.label21.TabIndex = 3;
+            this.label21.Text = "FECHA INICIAL";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 22);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(314, 16);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "INGRESE FECHAS DE EVALUACION DE VENTAS";
+            // 
+            // DatePicker_Reportes_Ventas_FINAL
+            // 
+            this.DatePicker_Reportes_Ventas_FINAL.Location = new System.Drawing.Point(220, 209);
+            this.DatePicker_Reportes_Ventas_FINAL.Name = "DatePicker_Reportes_Ventas_FINAL";
+            this.DatePicker_Reportes_Ventas_FINAL.Size = new System.Drawing.Size(251, 22);
+            this.DatePicker_Reportes_Ventas_FINAL.TabIndex = 1;
+            // 
+            // DatePicker_Reportes_Ventas_Inicio
+            // 
+            this.DatePicker_Reportes_Ventas_Inicio.Location = new System.Drawing.Point(220, 92);
+            this.DatePicker_Reportes_Ventas_Inicio.Name = "DatePicker_Reportes_Ventas_Inicio";
+            this.DatePicker_Reportes_Ventas_Inicio.Size = new System.Drawing.Size(251, 22);
+            this.DatePicker_Reportes_Ventas_Inicio.TabIndex = 0;
+            // 
+            // Tab_Reportes_GananciasEntreFechas
+            // 
+            this.Tab_Reportes_GananciasEntreFechas.Controls.Add(this.Label_reporte_ganancia_2);
+            this.Tab_Reportes_GananciasEntreFechas.Controls.Add(this.Label_reporte_ganancia_1);
+            this.Tab_Reportes_GananciasEntreFechas.Controls.Add(this.button_reporte_Ganancias);
+            this.Tab_Reportes_GananciasEntreFechas.Controls.Add(this.label23);
+            this.Tab_Reportes_GananciasEntreFechas.Controls.Add(this.label24);
+            this.Tab_Reportes_GananciasEntreFechas.Controls.Add(this.label25);
+            this.Tab_Reportes_GananciasEntreFechas.Controls.Add(this.datepicker_reportes_ganancias_final);
+            this.Tab_Reportes_GananciasEntreFechas.Controls.Add(this.datepicker_reportes_ganancias_inicio);
+            this.Tab_Reportes_GananciasEntreFechas.Location = new System.Drawing.Point(4, 25);
+            this.Tab_Reportes_GananciasEntreFechas.Name = "Tab_Reportes_GananciasEntreFechas";
+            this.Tab_Reportes_GananciasEntreFechas.Size = new System.Drawing.Size(1191, 408);
+            this.Tab_Reportes_GananciasEntreFechas.TabIndex = 2;
+            this.Tab_Reportes_GananciasEntreFechas.Text = "Ganancia entre dos fechas";
+            this.Tab_Reportes_GananciasEntreFechas.UseVisualStyleBackColor = true;
+            // 
+            // button_reporte_Ganancias
+            // 
+            this.button_reporte_Ganancias.Location = new System.Drawing.Point(236, 289);
+            this.button_reporte_Ganancias.Name = "button_reporte_Ganancias";
+            this.button_reporte_Ganancias.Size = new System.Drawing.Size(281, 91);
+            this.button_reporte_Ganancias.TabIndex = 11;
+            this.button_reporte_Ganancias.Text = "MOSTRAR GANANCIAS";
+            this.button_reporte_Ganancias.UseVisualStyleBackColor = true;
+            this.button_reporte_Ganancias.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(185, 179);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(92, 16);
+            this.label23.TabIndex = 10;
+            this.label23.Text = "FECHA FINAL";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(182, 67);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(99, 16);
+            this.label24.TabIndex = 9;
+            this.label24.Text = "FECHA INICIAL";
+            this.label24.Click += new System.EventHandler(this.label24_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(22, 16);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(314, 16);
+            this.label25.TabIndex = 8;
+            this.label25.Text = "INGRESE FECHAS DE EVALUACION DE VENTAS";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
+            // 
+            // datepicker_reportes_ganancias_final
+            // 
+            this.datepicker_reportes_ganancias_final.Location = new System.Drawing.Point(236, 203);
+            this.datepicker_reportes_ganancias_final.Name = "datepicker_reportes_ganancias_final";
+            this.datepicker_reportes_ganancias_final.Size = new System.Drawing.Size(251, 22);
+            this.datepicker_reportes_ganancias_final.TabIndex = 7;
+            this.datepicker_reportes_ganancias_final.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // datepicker_reportes_ganancias_inicio
+            // 
+            this.datepicker_reportes_ganancias_inicio.Location = new System.Drawing.Point(236, 86);
+            this.datepicker_reportes_ganancias_inicio.Name = "datepicker_reportes_ganancias_inicio";
+            this.datepicker_reportes_ganancias_inicio.Size = new System.Drawing.Size(251, 22);
+            this.datepicker_reportes_ganancias_inicio.TabIndex = 6;
+            this.datepicker_reportes_ganancias_inicio.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
+            // Tab_Reportes_VentasPendientes
+            // 
+            this.Tab_Reportes_VentasPendientes.Location = new System.Drawing.Point(4, 25);
+            this.Tab_Reportes_VentasPendientes.Name = "Tab_Reportes_VentasPendientes";
+            this.Tab_Reportes_VentasPendientes.Size = new System.Drawing.Size(1191, 408);
+            this.Tab_Reportes_VentasPendientes.TabIndex = 3;
+            this.Tab_Reportes_VentasPendientes.Text = "Ventas Pendientes de entrega";
+            this.Tab_Reportes_VentasPendientes.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -621,176 +865,23 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "producto";
             // 
-            // Tab_Reportes
+            // Label_reporte_ganancia_1
             // 
-            this.Tab_Reportes.Controls.Add(this.tabControl4);
-            this.Tab_Reportes.Location = new System.Drawing.Point(4, 25);
-            this.Tab_Reportes.Name = "Tab_Reportes";
-            this.Tab_Reportes.Size = new System.Drawing.Size(1205, 446);
-            this.Tab_Reportes.TabIndex = 2;
-            this.Tab_Reportes.Text = "Reportes";
-            this.Tab_Reportes.UseVisualStyleBackColor = true;
+            this.Label_reporte_ganancia_1.AutoSize = true;
+            this.Label_reporte_ganancia_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_reporte_ganancia_1.Location = new System.Drawing.Point(707, 140);
+            this.Label_reporte_ganancia_1.Name = "Label_reporte_ganancia_1";
+            this.Label_reporte_ganancia_1.Size = new System.Drawing.Size(0, 32);
+            this.Label_reporte_ganancia_1.TabIndex = 12;
             // 
-            // tabControl4
+            // Label_reporte_ganancia_2
             // 
-            this.tabControl4.Controls.Add(this.Tab_Reportes_MasVendidos);
-            this.tabControl4.Controls.Add(this.Tab_Reportes_TotalEntreDosFechas);
-            this.tabControl4.Controls.Add(this.Tab_Reportes_GananciasEntreFechas);
-            this.tabControl4.Controls.Add(this.Tab_Reportes_VentasPendientes);
-            this.tabControl4.Location = new System.Drawing.Point(3, 3);
-            this.tabControl4.Name = "tabControl4";
-            this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(1199, 437);
-            this.tabControl4.TabIndex = 0;
-            // 
-            // Tab_Reportes_MasVendidos
-            // 
-            this.Tab_Reportes_MasVendidos.Controls.Add(this.DataGrid_Reportes_MasVendidos);
-            this.Tab_Reportes_MasVendidos.Location = new System.Drawing.Point(4, 25);
-            this.Tab_Reportes_MasVendidos.Name = "Tab_Reportes_MasVendidos";
-            this.Tab_Reportes_MasVendidos.Padding = new System.Windows.Forms.Padding(3);
-            this.Tab_Reportes_MasVendidos.Size = new System.Drawing.Size(1191, 408);
-            this.Tab_Reportes_MasVendidos.TabIndex = 0;
-            this.Tab_Reportes_MasVendidos.Text = "Productos Mas Vendidos";
-            this.Tab_Reportes_MasVendidos.UseVisualStyleBackColor = true;
-            // 
-            // Tab_Reportes_TotalEntreDosFechas
-            // 
-            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.label_Reportes_VentasEntreFechas_4);
-            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.label_Reportes_VentasEntreFechas_3);
-            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.label_Reportes_VentasEntreFechas_2);
-            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.label_Reportes_VentasEntreFechas_1);
-            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.button_Reportes_VentasEntreFechas);
-            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.label22);
-            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.label21);
-            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.label18);
-            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.DatePicker_Reportes_Ventas_FINAL);
-            this.Tab_Reportes_TotalEntreDosFechas.Controls.Add(this.DatePicker_Reportes_Ventas_Inicio);
-            this.Tab_Reportes_TotalEntreDosFechas.Location = new System.Drawing.Point(4, 25);
-            this.Tab_Reportes_TotalEntreDosFechas.Name = "Tab_Reportes_TotalEntreDosFechas";
-            this.Tab_Reportes_TotalEntreDosFechas.Padding = new System.Windows.Forms.Padding(3);
-            this.Tab_Reportes_TotalEntreDosFechas.Size = new System.Drawing.Size(1191, 408);
-            this.Tab_Reportes_TotalEntreDosFechas.TabIndex = 1;
-            this.Tab_Reportes_TotalEntreDosFechas.Text = "Ventas Entre Fechas";
-            this.Tab_Reportes_TotalEntreDosFechas.UseVisualStyleBackColor = true;
-            // 
-            // Tab_Reportes_GananciasEntreFechas
-            // 
-            this.Tab_Reportes_GananciasEntreFechas.Location = new System.Drawing.Point(4, 25);
-            this.Tab_Reportes_GananciasEntreFechas.Name = "Tab_Reportes_GananciasEntreFechas";
-            this.Tab_Reportes_GananciasEntreFechas.Size = new System.Drawing.Size(1191, 408);
-            this.Tab_Reportes_GananciasEntreFechas.TabIndex = 2;
-            this.Tab_Reportes_GananciasEntreFechas.Text = "Ganancia entre dos fechas";
-            this.Tab_Reportes_GananciasEntreFechas.UseVisualStyleBackColor = true;
-            // 
-            // Tab_Reportes_VentasPendientes
-            // 
-            this.Tab_Reportes_VentasPendientes.Location = new System.Drawing.Point(4, 25);
-            this.Tab_Reportes_VentasPendientes.Name = "Tab_Reportes_VentasPendientes";
-            this.Tab_Reportes_VentasPendientes.Size = new System.Drawing.Size(1191, 408);
-            this.Tab_Reportes_VentasPendientes.TabIndex = 3;
-            this.Tab_Reportes_VentasPendientes.Text = "Ventas Pendientes de entrega";
-            this.Tab_Reportes_VentasPendientes.UseVisualStyleBackColor = true;
-            // 
-            // DataGrid_Reportes_MasVendidos
-            // 
-            this.DataGrid_Reportes_MasVendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGrid_Reportes_MasVendidos.Location = new System.Drawing.Point(6, 6);
-            this.DataGrid_Reportes_MasVendidos.Name = "DataGrid_Reportes_MasVendidos";
-            this.DataGrid_Reportes_MasVendidos.RowHeadersWidth = 51;
-            this.DataGrid_Reportes_MasVendidos.RowTemplate.Height = 24;
-            this.DataGrid_Reportes_MasVendidos.Size = new System.Drawing.Size(1179, 396);
-            this.DataGrid_Reportes_MasVendidos.TabIndex = 0;
-            // 
-            // DatePicker_Reportes_Ventas_Inicio
-            // 
-            this.DatePicker_Reportes_Ventas_Inicio.Location = new System.Drawing.Point(220, 92);
-            this.DatePicker_Reportes_Ventas_Inicio.Name = "DatePicker_Reportes_Ventas_Inicio";
-            this.DatePicker_Reportes_Ventas_Inicio.Size = new System.Drawing.Size(251, 22);
-            this.DatePicker_Reportes_Ventas_Inicio.TabIndex = 0;
-            // 
-            // DatePicker_Reportes_Ventas_FINAL
-            // 
-            this.DatePicker_Reportes_Ventas_FINAL.Location = new System.Drawing.Point(220, 209);
-            this.DatePicker_Reportes_Ventas_FINAL.Name = "DatePicker_Reportes_Ventas_FINAL";
-            this.DatePicker_Reportes_Ventas_FINAL.Size = new System.Drawing.Size(251, 22);
-            this.DatePicker_Reportes_Ventas_FINAL.TabIndex = 1;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 22);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(314, 16);
-            this.label18.TabIndex = 2;
-            this.label18.Text = "INGRESE FECHAS DE EVALUACION DE VENTAS";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(166, 73);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(99, 16);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "FECHA INICIAL";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(169, 185);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(92, 16);
-            this.label22.TabIndex = 4;
-            this.label22.Text = "FECHA FINAL";
-            // 
-            // button_Reportes_VentasEntreFechas
-            // 
-            this.button_Reportes_VentasEntreFechas.Location = new System.Drawing.Point(220, 295);
-            this.button_Reportes_VentasEntreFechas.Name = "button_Reportes_VentasEntreFechas";
-            this.button_Reportes_VentasEntreFechas.Size = new System.Drawing.Size(281, 91);
-            this.button_Reportes_VentasEntreFechas.TabIndex = 5;
-            this.button_Reportes_VentasEntreFechas.Text = "MOSTRAR VENTAS";
-            this.button_Reportes_VentasEntreFechas.UseVisualStyleBackColor = true;
-            this.button_Reportes_VentasEntreFechas.Click += new System.EventHandler(this.button_Reportes_VentasEntreFechas_Click);
-            // 
-            // label_Reportes_VentasEntreFechas_1
-            // 
-            this.label_Reportes_VentasEntreFechas_1.AutoSize = true;
-            this.label_Reportes_VentasEntreFechas_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Reportes_VentasEntreFechas_1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label_Reportes_VentasEntreFechas_1.Location = new System.Drawing.Point(636, 33);
-            this.label_Reportes_VentasEntreFechas_1.Name = "label_Reportes_VentasEntreFechas_1";
-            this.label_Reportes_VentasEntreFechas_1.Size = new System.Drawing.Size(0, 29);
-            this.label_Reportes_VentasEntreFechas_1.TabIndex = 6;
-            // 
-            // label_Reportes_VentasEntreFechas_2
-            // 
-            this.label_Reportes_VentasEntreFechas_2.AutoSize = true;
-            this.label_Reportes_VentasEntreFechas_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Reportes_VentasEntreFechas_2.Location = new System.Drawing.Point(750, 92);
-            this.label_Reportes_VentasEntreFechas_2.Name = "label_Reportes_VentasEntreFechas_2";
-            this.label_Reportes_VentasEntreFechas_2.Size = new System.Drawing.Size(0, 42);
-            this.label_Reportes_VentasEntreFechas_2.TabIndex = 7;
-            // 
-            // label_Reportes_VentasEntreFechas_3
-            // 
-            this.label_Reportes_VentasEntreFechas_3.AutoSize = true;
-            this.label_Reportes_VentasEntreFechas_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Reportes_VentasEntreFechas_3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label_Reportes_VentasEntreFechas_3.Location = new System.Drawing.Point(636, 185);
-            this.label_Reportes_VentasEntreFechas_3.Name = "label_Reportes_VentasEntreFechas_3";
-            this.label_Reportes_VentasEntreFechas_3.Size = new System.Drawing.Size(0, 29);
-            this.label_Reportes_VentasEntreFechas_3.TabIndex = 8;
-            this.label_Reportes_VentasEntreFechas_3.Click += new System.EventHandler(this.label_Reportes_VentasEntreFechas_3_Click);
-            // 
-            // label_Reportes_VentasEntreFechas_4
-            // 
-            this.label_Reportes_VentasEntreFechas_4.AutoSize = true;
-            this.label_Reportes_VentasEntreFechas_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Reportes_VentasEntreFechas_4.Location = new System.Drawing.Point(750, 227);
-            this.label_Reportes_VentasEntreFechas_4.Name = "label_Reportes_VentasEntreFechas_4";
-            this.label_Reportes_VentasEntreFechas_4.Size = new System.Drawing.Size(0, 42);
-            this.label_Reportes_VentasEntreFechas_4.TabIndex = 9;
+            this.Label_reporte_ganancia_2.AutoSize = true;
+            this.Label_reporte_ganancia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_reporte_ganancia_2.Location = new System.Drawing.Point(767, 193);
+            this.Label_reporte_ganancia_2.Name = "Label_reporte_ganancia_2";
+            this.Label_reporte_ganancia_2.Size = new System.Drawing.Size(0, 32);
+            this.Label_reporte_ganancia_2.TabIndex = 13;
             // 
             // Form1
             // 
@@ -813,18 +904,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericCmbioPrecioCompra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioExistencia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCambioPrecioVenta)).EndInit();
+            this.Tab_Reportes.ResumeLayout(false);
+            this.tabControl4.ResumeLayout(false);
+            this.Tab_Reportes_MasVendidos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Reportes_MasVendidos)).EndInit();
+            this.Tab_Reportes_TotalEntreDosFechas.ResumeLayout(false);
+            this.Tab_Reportes_TotalEntreDosFechas.PerformLayout();
+            this.Tab_Reportes_GananciasEntreFechas.ResumeLayout(false);
+            this.Tab_Reportes_GananciasEntreFechas.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            this.Tab_Reportes.ResumeLayout(false);
-            this.tabControl4.ResumeLayout(false);
-            this.Tab_Reportes_MasVendidos.ResumeLayout(false);
-            this.Tab_Reportes_TotalEntreDosFechas.ResumeLayout(false);
-            this.Tab_Reportes_TotalEntreDosFechas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Reportes_MasVendidos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -900,6 +993,14 @@
         private System.Windows.Forms.Label label_Reportes_VentasEntreFechas_4;
         private System.Windows.Forms.Label label_Reportes_VentasEntreFechas_3;
         private System.Windows.Forms.Label label_Reportes_VentasEntreFechas_2;
+        private System.Windows.Forms.Button button_reporte_Ganancias;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.DateTimePicker datepicker_reportes_ganancias_final;
+        private System.Windows.Forms.DateTimePicker datepicker_reportes_ganancias_inicio;
+        private System.Windows.Forms.Label Label_reporte_ganancia_2;
+        private System.Windows.Forms.Label Label_reporte_ganancia_1;
     }
 }
 

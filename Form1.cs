@@ -305,9 +305,82 @@ namespace proyecto1programacion
             label_Reportes_VentasEntreFechas_4.Text = "\n" + productos_vendidos;
         }
 
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            DateTime Fecha_inicio = datepicker_reportes_ganancias_inicio.Value.Date;
+            DateTime Fecha_Final = datepicker_reportes_ganancias_final.Value.Date;
+
+            decimal gananciatotal = 0;
+
+            foreach (var itemproducto in productos)
+            {
+                
+                foreach (var itemfactura in facturas)
+                {
+                    decimal gananciadelproducto = 0;
+                    int cantidad_de_producto_vendido = 0;
+                    if ((itemproducto.Codigo == itemfactura.Codigoproducto) && (itemfactura.Fechaventa.Date>=Fecha_inicio) && (itemfactura.Fechaventa.Date<=Fecha_Final)) 
+                    {
+                        gananciadelproducto = itemproducto.Precio_venta - itemproducto.Precio_compra;
+                        cantidad_de_producto_vendido = Int16.Parse(itemfactura.Cantidadproducto);
+
+                        gananciatotal += (gananciadelproducto * cantidad_de_producto_vendido);
+                    }
+
+                }
+                
+
+            }
+
+
+            //mostrar ganancia
+
+            Label_reporte_ganancia_1.Text = "GANANCIAS TOTALES:";
+            Label_reporte_ganancia_2.Text = "\n" + gananciatotal;
+
+
+
+
+        }
+
+
+
+
+
+
+
+
         private void label_Reportes_VentasEntreFechas_3_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
