@@ -203,35 +203,41 @@ namespace proyecto1programacion
                         AgregarClienteOTF acotf = new AgregarClienteOTF();
                         acotf.ShowDialog();
 
-                        string clienteNit = acotf.nit;
-                        string clienteNombre = acotf.nombre;
-                        string clienteApellido = acotf.apellido;
-                        string clienteDireccion = acotf.direccion;
-                        string clienteTelefono = acotf.telefono;
+                        if (acotf.fill)
+                        {
+                            string clienteNit = acotf.nit;
+                            string clienteNombre = acotf.nombre;
+                            string clienteApellido = acotf.apellido;
+                            string clienteDireccion = acotf.direccion;
+                            string clienteTelefono = acotf.telefono;
 
-                        Cliente cliente = new Cliente();
-                        cliente.Nit = clienteNit;
-                        cliente.Nombre = clienteNombre;
-                        cliente.Apellido = clienteApellido;
-                        cliente.Direccion = clienteDireccion;
-                        cliente.Telefono = clienteTelefono;
-                        clientes.Add(cliente);
-                        PersistenciaCliente persistencia = new PersistenciaCliente();
-                        persistencia.GuardarJson(clientes);
-                        actualizarComboBoxCliente();
-                        actualizarComboBoxProducto();
-                        MessageBox.Show("Cliente ingresado correctamente.");
+                            Cliente cliente = new Cliente();
+                            cliente.Nit = clienteNit;
+                            cliente.Nombre = clienteNombre;
+                            cliente.Apellido = clienteApellido;
+                            cliente.Direccion = clienteDireccion;
+                            cliente.Telefono = clienteTelefono;
+                            clientes.Add(cliente);
+                            PersistenciaCliente persistencia = new PersistenciaCliente();
+                            persistencia.GuardarJson(clientes);
+                            actualizarComboBoxCliente();
+                            actualizarComboBoxProducto();
+                            MessageBox.Show("Cliente ingresado correctamente.");
 
-                        guardarDatosDeVenta(cliente.Nit, productoSeleccionado, cantidadVendida);
+                            guardarDatosDeVenta(cliente.Nit, productoSeleccionado, cantidadVendida);
+                        }
+                        else {
+                            MessageBox.Show("No se realizo la venta. Intente agregar al cliente denuevo");
+                            return;
+                        }
                         break;
                     case DialogResult.No:
                         DialogResult resultado2 = MessageBox.Show("¿Desea guardar el nit como \"Consumidor Final\"?", "C/F", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                        if (resultado2 != DialogResult.Yes) return;
-                        else
-                        {
+                        if (resultado2 == DialogResult.Yes){
                             guardarDatosDeVenta(clientes.FirstOrDefault(c => c.Nombre.Equals("C/F")).Nit, productoSeleccionado, cantidadVendida);
                         }
+                        else return;
                         break;
                     default:
                         MessageBox.Show("La venta se ha cancelado");
@@ -504,6 +510,11 @@ namespace proyecto1programacion
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
