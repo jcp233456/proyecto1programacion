@@ -58,6 +58,7 @@
             this.Tab_Reportes = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.Tab_Reportes_MasVendidos = new System.Windows.Forms.TabPage();
+            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS = new System.Windows.Forms.Label();
             this.DataGrid_Reportes_MasVendidos = new System.Windows.Forms.DataGridView();
             this.Tab_Reportes_TotalEntreDosFechas = new System.Windows.Forms.TabPage();
             this.label_Reportes_VentasEntreFechas_4 = new System.Windows.Forms.Label();
@@ -80,6 +81,7 @@
             this.datepicker_reportes_ganancias_final = new System.Windows.Forms.DateTimePicker();
             this.datepicker_reportes_ganancias_inicio = new System.Windows.Forms.DateTimePicker();
             this.Tab_Reportes_VentasPendientes = new System.Windows.Forms.TabPage();
+            this.label_reportes_ALERTA_ventas_pendientes = new System.Windows.Forms.Label();
             this.datagrid_reportes_ventas_pendientes = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -106,8 +108,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label_reportes_ALERTA_ventas_pendientes = new System.Windows.Forms.Label();
-            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -137,10 +137,10 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Location = new System.Drawing.Point(12, 11);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1233, 527);
+            this.tabControl1.Size = new System.Drawing.Size(1233, 494);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -149,7 +149,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1225, 498);
+            this.tabPage1.Size = new System.Drawing.Size(1225, 465);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "admin";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -159,10 +159,10 @@
             this.tabControl2.Controls.Add(this.Tab_Nuevo_Producto);
             this.tabControl2.Controls.Add(this.Tab_Editar_Producto);
             this.tabControl2.Controls.Add(this.Tab_Reportes);
-            this.tabControl2.Location = new System.Drawing.Point(6, 17);
+            this.tabControl2.Location = new System.Drawing.Point(6, 16);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1213, 475);
+            this.tabControl2.Size = new System.Drawing.Size(1213, 445);
             this.tabControl2.TabIndex = 0;
             // 
             // Tab_Nuevo_Producto
@@ -183,16 +183,16 @@
             this.Tab_Nuevo_Producto.Location = new System.Drawing.Point(4, 25);
             this.Tab_Nuevo_Producto.Name = "Tab_Nuevo_Producto";
             this.Tab_Nuevo_Producto.Padding = new System.Windows.Forms.Padding(3);
-            this.Tab_Nuevo_Producto.Size = new System.Drawing.Size(1205, 446);
+            this.Tab_Nuevo_Producto.Size = new System.Drawing.Size(1205, 416);
             this.Tab_Nuevo_Producto.TabIndex = 0;
             this.Tab_Nuevo_Producto.Text = "Agregar Nuevo Producto";
             this.Tab_Nuevo_Producto.UseVisualStyleBackColor = true;
             // 
             // buttonIngresoProducto
             // 
-            this.buttonIngresoProducto.Location = new System.Drawing.Point(606, 151);
+            this.buttonIngresoProducto.Location = new System.Drawing.Point(606, 142);
             this.buttonIngresoProducto.Name = "buttonIngresoProducto";
-            this.buttonIngresoProducto.Size = new System.Drawing.Size(241, 63);
+            this.buttonIngresoProducto.Size = new System.Drawing.Size(241, 59);
             this.buttonIngresoProducto.TabIndex = 12;
             this.buttonIngresoProducto.Text = "Ingresar Producto";
             this.buttonIngresoProducto.UseVisualStyleBackColor = true;
@@ -200,99 +200,114 @@
             // 
             // numericCantidad
             // 
-            this.numericCantidad.Location = new System.Drawing.Point(261, 318);
+            this.numericCantidad.Location = new System.Drawing.Point(261, 298);
+            this.numericCantidad.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.numericCantidad.Name = "numericCantidad";
-            this.numericCantidad.Size = new System.Drawing.Size(147, 22);
+            this.numericCantidad.Size = new System.Drawing.Size(147, 25);
             this.numericCantidad.TabIndex = 11;
             // 
             // numericPrecioVenta
             // 
             this.numericPrecioVenta.DecimalPlaces = 2;
-            this.numericPrecioVenta.Location = new System.Drawing.Point(261, 255);
+            this.numericPrecioVenta.Location = new System.Drawing.Point(261, 239);
+            this.numericPrecioVenta.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.numericPrecioVenta.Name = "numericPrecioVenta";
-            this.numericPrecioVenta.Size = new System.Drawing.Size(147, 22);
+            this.numericPrecioVenta.Size = new System.Drawing.Size(147, 25);
             this.numericPrecioVenta.TabIndex = 10;
             // 
             // numeriPrecioCompra
             // 
             this.numeriPrecioCompra.DecimalPlaces = 2;
-            this.numeriPrecioCompra.Location = new System.Drawing.Point(261, 196);
+            this.numeriPrecioCompra.Location = new System.Drawing.Point(261, 184);
+            this.numeriPrecioCompra.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.numeriPrecioCompra.Name = "numeriPrecioCompra";
-            this.numeriPrecioCompra.Size = new System.Drawing.Size(147, 22);
+            this.numeriPrecioCompra.Size = new System.Drawing.Size(147, 25);
             this.numeriPrecioCompra.TabIndex = 9;
             // 
             // textBoxMarca
             // 
-            this.textBoxMarca.Location = new System.Drawing.Point(266, 135);
+            this.textBoxMarca.Location = new System.Drawing.Point(266, 127);
             this.textBoxMarca.Name = "textBoxMarca";
-            this.textBoxMarca.Size = new System.Drawing.Size(142, 22);
+            this.textBoxMarca.Size = new System.Drawing.Size(142, 25);
             this.textBoxMarca.TabIndex = 8;
             // 
             // textBoxNombreProducto
             // 
-            this.textBoxNombreProducto.Location = new System.Drawing.Point(266, 80);
+            this.textBoxNombreProducto.Location = new System.Drawing.Point(266, 75);
             this.textBoxNombreProducto.Name = "textBoxNombreProducto";
-            this.textBoxNombreProducto.Size = new System.Drawing.Size(142, 22);
+            this.textBoxNombreProducto.Size = new System.Drawing.Size(142, 25);
             this.textBoxNombreProducto.TabIndex = 7;
             // 
             // textBoxCodigo
             // 
-            this.textBoxCodigo.Location = new System.Drawing.Point(266, 25);
+            this.textBoxCodigo.Location = new System.Drawing.Point(266, 23);
             this.textBoxCodigo.Name = "textBoxCodigo";
-            this.textBoxCodigo.Size = new System.Drawing.Size(142, 22);
+            this.textBoxCodigo.Size = new System.Drawing.Size(142, 25);
             this.textBoxCodigo.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 318);
+            this.label6.Location = new System.Drawing.Point(22, 298);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 16);
+            this.label6.Size = new System.Drawing.Size(133, 15);
             this.label6.TabIndex = 5;
             this.label6.Text = "Cantidad en existencia";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 255);
+            this.label5.Location = new System.Drawing.Point(22, 239);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 16);
+            this.label5.Size = new System.Drawing.Size(94, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "Precio de venta";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 198);
+            this.label4.Location = new System.Drawing.Point(22, 186);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 16);
+            this.label4.Size = new System.Drawing.Size(106, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "Precio de compra";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 135);
+            this.label3.Location = new System.Drawing.Point(22, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 16);
+            this.label3.Size = new System.Drawing.Size(97, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Marca producto";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 80);
+            this.label2.Location = new System.Drawing.Point(22, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 16);
+            this.label2.Size = new System.Drawing.Size(107, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre producto";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 25);
+            this.label1.Location = new System.Drawing.Point(22, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 16);
+            this.label1.Size = new System.Drawing.Size(102, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo producto";
             // 
@@ -310,7 +325,7 @@
             this.Tab_Editar_Producto.Location = new System.Drawing.Point(4, 25);
             this.Tab_Editar_Producto.Name = "Tab_Editar_Producto";
             this.Tab_Editar_Producto.Padding = new System.Windows.Forms.Padding(3);
-            this.Tab_Editar_Producto.Size = new System.Drawing.Size(1205, 446);
+            this.Tab_Editar_Producto.Size = new System.Drawing.Size(1205, 416);
             this.Tab_Editar_Producto.TabIndex = 1;
             this.Tab_Editar_Producto.Text = "Editar Producto Existente";
             this.Tab_Editar_Producto.UseVisualStyleBackColor = true;
@@ -318,26 +333,26 @@
             // numericCmbioPrecioCompra
             // 
             this.numericCmbioPrecioCompra.DecimalPlaces = 2;
-            this.numericCmbioPrecioCompra.Location = new System.Drawing.Point(328, 138);
+            this.numericCmbioPrecioCompra.Location = new System.Drawing.Point(328, 129);
             this.numericCmbioPrecioCompra.Name = "numericCmbioPrecioCompra";
-            this.numericCmbioPrecioCompra.Size = new System.Drawing.Size(208, 22);
+            this.numericCmbioPrecioCompra.Size = new System.Drawing.Size(208, 25);
             this.numericCmbioPrecioCompra.TabIndex = 8;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(58, 138);
+            this.label10.Location = new System.Drawing.Point(58, 129);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 16);
+            this.label10.Size = new System.Drawing.Size(91, 15);
             this.label10.TabIndex = 7;
             this.label10.Text = "precio Compra";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // buttonCambiarProducto
             // 
-            this.buttonCambiarProducto.Location = new System.Drawing.Point(691, 106);
+            this.buttonCambiarProducto.Location = new System.Drawing.Point(691, 99);
             this.buttonCambiarProducto.Name = "buttonCambiarProducto";
-            this.buttonCambiarProducto.Size = new System.Drawing.Size(206, 80);
+            this.buttonCambiarProducto.Size = new System.Drawing.Size(206, 75);
             this.buttonCambiarProducto.TabIndex = 6;
             this.buttonCambiarProducto.Text = "cambiar producto";
             this.buttonCambiarProducto.UseVisualStyleBackColor = true;
@@ -345,52 +360,52 @@
             // 
             // numericCambioExistencia
             // 
-            this.numericCambioExistencia.Location = new System.Drawing.Point(310, 301);
+            this.numericCambioExistencia.Location = new System.Drawing.Point(310, 282);
             this.numericCambioExistencia.Name = "numericCambioExistencia";
-            this.numericCambioExistencia.Size = new System.Drawing.Size(208, 22);
+            this.numericCambioExistencia.Size = new System.Drawing.Size(208, 25);
             this.numericCambioExistencia.TabIndex = 5;
             // 
             // numericCambioPrecioVenta
             // 
             this.numericCambioPrecioVenta.DecimalPlaces = 2;
-            this.numericCambioPrecioVenta.Location = new System.Drawing.Point(310, 238);
+            this.numericCambioPrecioVenta.Location = new System.Drawing.Point(310, 223);
             this.numericCambioPrecioVenta.Name = "numericCambioPrecioVenta";
-            this.numericCambioPrecioVenta.Size = new System.Drawing.Size(208, 22);
+            this.numericCambioPrecioVenta.Size = new System.Drawing.Size(208, 25);
             this.numericCambioPrecioVenta.TabIndex = 4;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(42, 301);
+            this.label9.Location = new System.Drawing.Point(42, 282);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 16);
+            this.label9.Size = new System.Drawing.Size(62, 15);
             this.label9.TabIndex = 3;
             this.label9.Text = "existencia";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(42, 244);
+            this.label8.Location = new System.Drawing.Point(42, 229);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 16);
+            this.label8.Size = new System.Drawing.Size(76, 15);
             this.label8.TabIndex = 2;
             this.label8.Text = "precio venta";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(42, 38);
+            this.label7.Location = new System.Drawing.Point(42, 36);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(184, 16);
+            this.label7.Size = new System.Drawing.Size(178, 15);
             this.label7.TabIndex = 1;
             this.label7.Text = "encuentre produto a modificar";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(310, 38);
+            this.comboBox1.Location = new System.Drawing.Point(310, 36);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(226, 24);
+            this.comboBox1.Size = new System.Drawing.Size(226, 23);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -399,7 +414,7 @@
             this.Tab_Reportes.Controls.Add(this.tabControl4);
             this.Tab_Reportes.Location = new System.Drawing.Point(4, 25);
             this.Tab_Reportes.Name = "Tab_Reportes";
-            this.Tab_Reportes.Size = new System.Drawing.Size(1205, 446);
+            this.Tab_Reportes.Size = new System.Drawing.Size(1205, 416);
             this.Tab_Reportes.TabIndex = 2;
             this.Tab_Reportes.Text = "Reportes";
             this.Tab_Reportes.UseVisualStyleBackColor = true;
@@ -413,7 +428,7 @@
             this.tabControl4.Location = new System.Drawing.Point(3, 3);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(1199, 437);
+            this.tabControl4.Size = new System.Drawing.Size(1199, 410);
             this.tabControl4.TabIndex = 0;
             // 
             // Tab_Reportes_MasVendidos
@@ -423,10 +438,19 @@
             this.Tab_Reportes_MasVendidos.Location = new System.Drawing.Point(4, 25);
             this.Tab_Reportes_MasVendidos.Name = "Tab_Reportes_MasVendidos";
             this.Tab_Reportes_MasVendidos.Padding = new System.Windows.Forms.Padding(3);
-            this.Tab_Reportes_MasVendidos.Size = new System.Drawing.Size(1191, 408);
+            this.Tab_Reportes_MasVendidos.Size = new System.Drawing.Size(1191, 381);
             this.Tab_Reportes_MasVendidos.TabIndex = 0;
             this.Tab_Reportes_MasVendidos.Text = "Productos Mas Vendidos";
             this.Tab_Reportes_MasVendidos.UseVisualStyleBackColor = true;
+            // 
+            // label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS
+            // 
+            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.AutoSize = true;
+            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.Location = new System.Drawing.Point(325, 350);
+            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.Name = "label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS";
+            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.Size = new System.Drawing.Size(0, 32);
+            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.TabIndex = 1;
             // 
             // DataGrid_Reportes_MasVendidos
             // 
@@ -435,7 +459,7 @@
             this.DataGrid_Reportes_MasVendidos.Name = "DataGrid_Reportes_MasVendidos";
             this.DataGrid_Reportes_MasVendidos.RowHeadersWidth = 51;
             this.DataGrid_Reportes_MasVendidos.RowTemplate.Height = 24;
-            this.DataGrid_Reportes_MasVendidos.Size = new System.Drawing.Size(1179, 359);
+            this.DataGrid_Reportes_MasVendidos.Size = new System.Drawing.Size(1179, 337);
             this.DataGrid_Reportes_MasVendidos.TabIndex = 0;
             this.DataGrid_Reportes_MasVendidos.Visible = false;
             // 
@@ -454,7 +478,7 @@
             this.Tab_Reportes_TotalEntreDosFechas.Location = new System.Drawing.Point(4, 25);
             this.Tab_Reportes_TotalEntreDosFechas.Name = "Tab_Reportes_TotalEntreDosFechas";
             this.Tab_Reportes_TotalEntreDosFechas.Padding = new System.Windows.Forms.Padding(3);
-            this.Tab_Reportes_TotalEntreDosFechas.Size = new System.Drawing.Size(1191, 408);
+            this.Tab_Reportes_TotalEntreDosFechas.Size = new System.Drawing.Size(1191, 381);
             this.Tab_Reportes_TotalEntreDosFechas.TabIndex = 1;
             this.Tab_Reportes_TotalEntreDosFechas.Text = "Ventas Entre Fechas";
             this.Tab_Reportes_TotalEntreDosFechas.UseVisualStyleBackColor = true;
@@ -463,7 +487,7 @@
             // 
             this.label_Reportes_VentasEntreFechas_4.AutoSize = true;
             this.label_Reportes_VentasEntreFechas_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Reportes_VentasEntreFechas_4.Location = new System.Drawing.Point(750, 227);
+            this.label_Reportes_VentasEntreFechas_4.Location = new System.Drawing.Point(750, 213);
             this.label_Reportes_VentasEntreFechas_4.Name = "label_Reportes_VentasEntreFechas_4";
             this.label_Reportes_VentasEntreFechas_4.Size = new System.Drawing.Size(0, 42);
             this.label_Reportes_VentasEntreFechas_4.TabIndex = 9;
@@ -473,7 +497,7 @@
             this.label_Reportes_VentasEntreFechas_3.AutoSize = true;
             this.label_Reportes_VentasEntreFechas_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Reportes_VentasEntreFechas_3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label_Reportes_VentasEntreFechas_3.Location = new System.Drawing.Point(636, 185);
+            this.label_Reportes_VentasEntreFechas_3.Location = new System.Drawing.Point(636, 173);
             this.label_Reportes_VentasEntreFechas_3.Name = "label_Reportes_VentasEntreFechas_3";
             this.label_Reportes_VentasEntreFechas_3.Size = new System.Drawing.Size(0, 29);
             this.label_Reportes_VentasEntreFechas_3.TabIndex = 8;
@@ -483,7 +507,7 @@
             // 
             this.label_Reportes_VentasEntreFechas_2.AutoSize = true;
             this.label_Reportes_VentasEntreFechas_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Reportes_VentasEntreFechas_2.Location = new System.Drawing.Point(750, 92);
+            this.label_Reportes_VentasEntreFechas_2.Location = new System.Drawing.Point(750, 86);
             this.label_Reportes_VentasEntreFechas_2.Name = "label_Reportes_VentasEntreFechas_2";
             this.label_Reportes_VentasEntreFechas_2.Size = new System.Drawing.Size(0, 42);
             this.label_Reportes_VentasEntreFechas_2.TabIndex = 7;
@@ -493,16 +517,16 @@
             this.label_Reportes_VentasEntreFechas_1.AutoSize = true;
             this.label_Reportes_VentasEntreFechas_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Reportes_VentasEntreFechas_1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label_Reportes_VentasEntreFechas_1.Location = new System.Drawing.Point(636, 33);
+            this.label_Reportes_VentasEntreFechas_1.Location = new System.Drawing.Point(636, 31);
             this.label_Reportes_VentasEntreFechas_1.Name = "label_Reportes_VentasEntreFechas_1";
             this.label_Reportes_VentasEntreFechas_1.Size = new System.Drawing.Size(0, 29);
             this.label_Reportes_VentasEntreFechas_1.TabIndex = 6;
             // 
             // button_Reportes_VentasEntreFechas
             // 
-            this.button_Reportes_VentasEntreFechas.Location = new System.Drawing.Point(220, 295);
+            this.button_Reportes_VentasEntreFechas.Location = new System.Drawing.Point(220, 277);
             this.button_Reportes_VentasEntreFechas.Name = "button_Reportes_VentasEntreFechas";
-            this.button_Reportes_VentasEntreFechas.Size = new System.Drawing.Size(281, 91);
+            this.button_Reportes_VentasEntreFechas.Size = new System.Drawing.Size(281, 85);
             this.button_Reportes_VentasEntreFechas.TabIndex = 5;
             this.button_Reportes_VentasEntreFechas.Text = "MOSTRAR VENTAS";
             this.button_Reportes_VentasEntreFechas.UseVisualStyleBackColor = true;
@@ -511,42 +535,42 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(169, 185);
+            this.label22.Location = new System.Drawing.Point(169, 173);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(92, 16);
+            this.label22.Size = new System.Drawing.Size(99, 15);
             this.label22.TabIndex = 4;
             this.label22.Text = "FECHA FINAL";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(166, 73);
+            this.label21.Location = new System.Drawing.Point(166, 68);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(99, 16);
+            this.label21.Size = new System.Drawing.Size(110, 15);
             this.label21.TabIndex = 3;
             this.label21.Text = "FECHA INICIAL";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 22);
+            this.label18.Location = new System.Drawing.Point(6, 21);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(314, 16);
+            this.label18.Size = new System.Drawing.Size(327, 15);
             this.label18.TabIndex = 2;
             this.label18.Text = "INGRESE FECHAS DE EVALUACION DE VENTAS";
             // 
             // DatePicker_Reportes_Ventas_FINAL
             // 
-            this.DatePicker_Reportes_Ventas_FINAL.Location = new System.Drawing.Point(220, 209);
+            this.DatePicker_Reportes_Ventas_FINAL.Location = new System.Drawing.Point(220, 196);
             this.DatePicker_Reportes_Ventas_FINAL.Name = "DatePicker_Reportes_Ventas_FINAL";
-            this.DatePicker_Reportes_Ventas_FINAL.Size = new System.Drawing.Size(251, 22);
+            this.DatePicker_Reportes_Ventas_FINAL.Size = new System.Drawing.Size(251, 25);
             this.DatePicker_Reportes_Ventas_FINAL.TabIndex = 1;
             // 
             // DatePicker_Reportes_Ventas_Inicio
             // 
-            this.DatePicker_Reportes_Ventas_Inicio.Location = new System.Drawing.Point(220, 92);
+            this.DatePicker_Reportes_Ventas_Inicio.Location = new System.Drawing.Point(220, 86);
             this.DatePicker_Reportes_Ventas_Inicio.Name = "DatePicker_Reportes_Ventas_Inicio";
-            this.DatePicker_Reportes_Ventas_Inicio.Size = new System.Drawing.Size(251, 22);
+            this.DatePicker_Reportes_Ventas_Inicio.Size = new System.Drawing.Size(251, 25);
             this.DatePicker_Reportes_Ventas_Inicio.TabIndex = 0;
             // 
             // Tab_Reportes_GananciasEntreFechas
@@ -561,7 +585,7 @@
             this.Tab_Reportes_GananciasEntreFechas.Controls.Add(this.datepicker_reportes_ganancias_inicio);
             this.Tab_Reportes_GananciasEntreFechas.Location = new System.Drawing.Point(4, 25);
             this.Tab_Reportes_GananciasEntreFechas.Name = "Tab_Reportes_GananciasEntreFechas";
-            this.Tab_Reportes_GananciasEntreFechas.Size = new System.Drawing.Size(1191, 408);
+            this.Tab_Reportes_GananciasEntreFechas.Size = new System.Drawing.Size(1191, 381);
             this.Tab_Reportes_GananciasEntreFechas.TabIndex = 2;
             this.Tab_Reportes_GananciasEntreFechas.Text = "Ganancia entre dos fechas";
             this.Tab_Reportes_GananciasEntreFechas.UseVisualStyleBackColor = true;
@@ -570,7 +594,7 @@
             // 
             this.Label_reporte_ganancia_2.AutoSize = true;
             this.Label_reporte_ganancia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_reporte_ganancia_2.Location = new System.Drawing.Point(767, 193);
+            this.Label_reporte_ganancia_2.Location = new System.Drawing.Point(767, 181);
             this.Label_reporte_ganancia_2.Name = "Label_reporte_ganancia_2";
             this.Label_reporte_ganancia_2.Size = new System.Drawing.Size(0, 32);
             this.Label_reporte_ganancia_2.TabIndex = 13;
@@ -579,16 +603,16 @@
             // 
             this.Label_reporte_ganancia_1.AutoSize = true;
             this.Label_reporte_ganancia_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_reporte_ganancia_1.Location = new System.Drawing.Point(707, 140);
+            this.Label_reporte_ganancia_1.Location = new System.Drawing.Point(707, 131);
             this.Label_reporte_ganancia_1.Name = "Label_reporte_ganancia_1";
             this.Label_reporte_ganancia_1.Size = new System.Drawing.Size(0, 32);
             this.Label_reporte_ganancia_1.TabIndex = 12;
             // 
             // button_reporte_Ganancias
             // 
-            this.button_reporte_Ganancias.Location = new System.Drawing.Point(236, 289);
+            this.button_reporte_Ganancias.Location = new System.Drawing.Point(236, 271);
             this.button_reporte_Ganancias.Name = "button_reporte_Ganancias";
-            this.button_reporte_Ganancias.Size = new System.Drawing.Size(281, 91);
+            this.button_reporte_Ganancias.Size = new System.Drawing.Size(281, 85);
             this.button_reporte_Ganancias.TabIndex = 11;
             this.button_reporte_Ganancias.Text = "MOSTRAR GANANCIAS";
             this.button_reporte_Ganancias.UseVisualStyleBackColor = true;
@@ -597,9 +621,9 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(185, 179);
+            this.label23.Location = new System.Drawing.Point(185, 168);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(92, 16);
+            this.label23.Size = new System.Drawing.Size(99, 15);
             this.label23.TabIndex = 10;
             this.label23.Text = "FECHA FINAL";
             this.label23.Click += new System.EventHandler(this.label23_Click);
@@ -607,9 +631,9 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(182, 67);
+            this.label24.Location = new System.Drawing.Point(182, 63);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(99, 16);
+            this.label24.Size = new System.Drawing.Size(110, 15);
             this.label24.TabIndex = 9;
             this.label24.Text = "FECHA INICIAL";
             this.label24.Click += new System.EventHandler(this.label24_Click);
@@ -617,26 +641,26 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(22, 16);
+            this.label25.Location = new System.Drawing.Point(22, 15);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(314, 16);
+            this.label25.Size = new System.Drawing.Size(327, 15);
             this.label25.TabIndex = 8;
             this.label25.Text = "INGRESE FECHAS DE EVALUACION DE VENTAS";
             this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // datepicker_reportes_ganancias_final
             // 
-            this.datepicker_reportes_ganancias_final.Location = new System.Drawing.Point(236, 203);
+            this.datepicker_reportes_ganancias_final.Location = new System.Drawing.Point(236, 190);
             this.datepicker_reportes_ganancias_final.Name = "datepicker_reportes_ganancias_final";
-            this.datepicker_reportes_ganancias_final.Size = new System.Drawing.Size(251, 22);
+            this.datepicker_reportes_ganancias_final.Size = new System.Drawing.Size(251, 25);
             this.datepicker_reportes_ganancias_final.TabIndex = 7;
             this.datepicker_reportes_ganancias_final.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // datepicker_reportes_ganancias_inicio
             // 
-            this.datepicker_reportes_ganancias_inicio.Location = new System.Drawing.Point(236, 86);
+            this.datepicker_reportes_ganancias_inicio.Location = new System.Drawing.Point(236, 81);
             this.datepicker_reportes_ganancias_inicio.Name = "datepicker_reportes_ganancias_inicio";
-            this.datepicker_reportes_ganancias_inicio.Size = new System.Drawing.Size(251, 22);
+            this.datepicker_reportes_ganancias_inicio.Size = new System.Drawing.Size(251, 25);
             this.datepicker_reportes_ganancias_inicio.TabIndex = 6;
             this.datepicker_reportes_ganancias_inicio.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
@@ -646,10 +670,20 @@
             this.Tab_Reportes_VentasPendientes.Controls.Add(this.datagrid_reportes_ventas_pendientes);
             this.Tab_Reportes_VentasPendientes.Location = new System.Drawing.Point(4, 25);
             this.Tab_Reportes_VentasPendientes.Name = "Tab_Reportes_VentasPendientes";
-            this.Tab_Reportes_VentasPendientes.Size = new System.Drawing.Size(1191, 408);
+            this.Tab_Reportes_VentasPendientes.Size = new System.Drawing.Size(1191, 381);
             this.Tab_Reportes_VentasPendientes.TabIndex = 3;
             this.Tab_Reportes_VentasPendientes.Text = "Ventas Pendientes de entrega";
             this.Tab_Reportes_VentasPendientes.UseVisualStyleBackColor = true;
+            // 
+            // label_reportes_ALERTA_ventas_pendientes
+            // 
+            this.label_reportes_ALERTA_ventas_pendientes.AutoSize = true;
+            this.label_reportes_ALERTA_ventas_pendientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_reportes_ALERTA_ventas_pendientes.Location = new System.Drawing.Point(373, 345);
+            this.label_reportes_ALERTA_ventas_pendientes.Name = "label_reportes_ALERTA_ventas_pendientes";
+            this.label_reportes_ALERTA_ventas_pendientes.Size = new System.Drawing.Size(0, 32);
+            this.label_reportes_ALERTA_ventas_pendientes.TabIndex = 1;
+            this.label_reportes_ALERTA_ventas_pendientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // datagrid_reportes_ventas_pendientes
             // 
@@ -658,7 +692,7 @@
             this.datagrid_reportes_ventas_pendientes.Name = "datagrid_reportes_ventas_pendientes";
             this.datagrid_reportes_ventas_pendientes.RowHeadersWidth = 51;
             this.datagrid_reportes_ventas_pendientes.RowTemplate.Height = 24;
-            this.datagrid_reportes_ventas_pendientes.Size = new System.Drawing.Size(1185, 362);
+            this.datagrid_reportes_ventas_pendientes.Size = new System.Drawing.Size(1185, 339);
             this.datagrid_reportes_ventas_pendientes.TabIndex = 0;
             this.datagrid_reportes_ventas_pendientes.Visible = false;
             // 
@@ -668,7 +702,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1225, 498);
+            this.tabPage2.Size = new System.Drawing.Size(1225, 465);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "clientes";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -680,7 +714,7 @@
             this.tabControl3.Location = new System.Drawing.Point(6, 6);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1213, 482);
+            this.tabControl3.Size = new System.Drawing.Size(1213, 452);
             this.tabControl3.TabIndex = 0;
             // 
             // tabPage5
@@ -699,16 +733,16 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1205, 453);
+            this.tabPage5.Size = new System.Drawing.Size(1205, 423);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "Registrar cliente";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // buttonIngresoCliente
             // 
-            this.buttonIngresoCliente.Location = new System.Drawing.Point(545, 111);
+            this.buttonIngresoCliente.Location = new System.Drawing.Point(545, 104);
             this.buttonIngresoCliente.Name = "buttonIngresoCliente";
-            this.buttonIngresoCliente.Size = new System.Drawing.Size(315, 77);
+            this.buttonIngresoCliente.Size = new System.Drawing.Size(315, 72);
             this.buttonIngresoCliente.TabIndex = 10;
             this.buttonIngresoCliente.Text = "Registrar Cliente";
             this.buttonIngresoCliente.UseVisualStyleBackColor = true;
@@ -716,81 +750,81 @@
             // 
             // textBoxTelefonoCliente
             // 
-            this.textBoxTelefonoCliente.Location = new System.Drawing.Point(187, 267);
+            this.textBoxTelefonoCliente.Location = new System.Drawing.Point(187, 250);
             this.textBoxTelefonoCliente.Name = "textBoxTelefonoCliente";
-            this.textBoxTelefonoCliente.Size = new System.Drawing.Size(184, 22);
+            this.textBoxTelefonoCliente.Size = new System.Drawing.Size(184, 25);
             this.textBoxTelefonoCliente.TabIndex = 9;
             // 
             // textBoxDireccionCliente
             // 
-            this.textBoxDireccionCliente.Location = new System.Drawing.Point(187, 204);
+            this.textBoxDireccionCliente.Location = new System.Drawing.Point(187, 191);
             this.textBoxDireccionCliente.Name = "textBoxDireccionCliente";
-            this.textBoxDireccionCliente.Size = new System.Drawing.Size(184, 22);
+            this.textBoxDireccionCliente.Size = new System.Drawing.Size(184, 25);
             this.textBoxDireccionCliente.TabIndex = 8;
             // 
             // textBoxApellidoCliente
             // 
-            this.textBoxApellidoCliente.Location = new System.Drawing.Point(187, 138);
+            this.textBoxApellidoCliente.Location = new System.Drawing.Point(187, 129);
             this.textBoxApellidoCliente.Name = "textBoxApellidoCliente";
-            this.textBoxApellidoCliente.Size = new System.Drawing.Size(184, 22);
+            this.textBoxApellidoCliente.Size = new System.Drawing.Size(184, 25);
             this.textBoxApellidoCliente.TabIndex = 7;
             // 
             // textBoxNombreCliente
             // 
-            this.textBoxNombreCliente.Location = new System.Drawing.Point(187, 73);
+            this.textBoxNombreCliente.Location = new System.Drawing.Point(187, 68);
             this.textBoxNombreCliente.Name = "textBoxNombreCliente";
-            this.textBoxNombreCliente.Size = new System.Drawing.Size(184, 22);
+            this.textBoxNombreCliente.Size = new System.Drawing.Size(184, 25);
             this.textBoxNombreCliente.TabIndex = 6;
             // 
             // textBoxNit
             // 
-            this.textBoxNit.Location = new System.Drawing.Point(187, 21);
+            this.textBoxNit.Location = new System.Drawing.Point(187, 20);
             this.textBoxNit.Name = "textBoxNit";
-            this.textBoxNit.Size = new System.Drawing.Size(184, 22);
+            this.textBoxNit.Size = new System.Drawing.Size(184, 25);
             this.textBoxNit.TabIndex = 5;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(54, 270);
+            this.label15.Location = new System.Drawing.Point(54, 253);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(61, 16);
+            this.label15.Size = new System.Drawing.Size(58, 15);
             this.label15.TabIndex = 4;
             this.label15.Text = "Telefono";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(42, 190);
+            this.label14.Location = new System.Drawing.Point(42, 178);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(64, 16);
+            this.label14.Size = new System.Drawing.Size(62, 15);
             this.label14.TabIndex = 3;
             this.label14.Text = "Direccion";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(43, 138);
+            this.label13.Location = new System.Drawing.Point(43, 129);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(57, 16);
+            this.label13.Size = new System.Drawing.Size(56, 15);
             this.label13.TabIndex = 2;
             this.label13.Text = "Apellido";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(42, 73);
+            this.label12.Location = new System.Drawing.Point(42, 68);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 16);
+            this.label12.Size = new System.Drawing.Size(53, 15);
             this.label12.TabIndex = 1;
             this.label12.Text = "Nombre";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(42, 21);
+            this.label11.Location = new System.Drawing.Point(42, 20);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(29, 16);
+            this.label11.Size = new System.Drawing.Size(31, 15);
             this.label11.TabIndex = 0;
             this.label11.Text = "NIT";
             // 
@@ -809,7 +843,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1205, 453);
+            this.tabPage6.Size = new System.Drawing.Size(1205, 423);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Venta";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -817,24 +851,24 @@
             // comboBoxVentaProducto
             // 
             this.comboBoxVentaProducto.FormattingEnabled = true;
-            this.comboBoxVentaProducto.Location = new System.Drawing.Point(203, 141);
+            this.comboBoxVentaProducto.Location = new System.Drawing.Point(203, 132);
             this.comboBoxVentaProducto.Name = "comboBoxVentaProducto";
-            this.comboBoxVentaProducto.Size = new System.Drawing.Size(130, 24);
+            this.comboBoxVentaProducto.Size = new System.Drawing.Size(130, 23);
             this.comboBoxVentaProducto.TabIndex = 12;
             // 
             // comboBoxVentaNit
             // 
             this.comboBoxVentaNit.FormattingEnabled = true;
-            this.comboBoxVentaNit.Location = new System.Drawing.Point(195, 29);
+            this.comboBoxVentaNit.Location = new System.Drawing.Point(195, 27);
             this.comboBoxVentaNit.Name = "comboBoxVentaNit";
-            this.comboBoxVentaNit.Size = new System.Drawing.Size(130, 24);
+            this.comboBoxVentaNit.Size = new System.Drawing.Size(130, 23);
             this.comboBoxVentaNit.TabIndex = 11;
             // 
             // buttonVenta
             // 
-            this.buttonVenta.Location = new System.Drawing.Point(691, 125);
+            this.buttonVenta.Location = new System.Drawing.Point(691, 117);
             this.buttonVenta.Name = "buttonVenta";
-            this.buttonVenta.Size = new System.Drawing.Size(173, 55);
+            this.buttonVenta.Size = new System.Drawing.Size(173, 52);
             this.buttonVenta.TabIndex = 10;
             this.buttonVenta.Text = "Registrar venta";
             this.buttonVenta.UseVisualStyleBackColor = true;
@@ -842,17 +876,17 @@
             // 
             // textBoxVentaCantidad
             // 
-            this.textBoxVentaCantidad.Location = new System.Drawing.Point(195, 80);
+            this.textBoxVentaCantidad.Location = new System.Drawing.Point(195, 75);
             this.textBoxVentaCantidad.Name = "textBoxVentaCantidad";
-            this.textBoxVentaCantidad.Size = new System.Drawing.Size(138, 22);
+            this.textBoxVentaCantidad.Size = new System.Drawing.Size(138, 25);
             this.textBoxVentaCantidad.TabIndex = 8;
             // 
             // checkBoxNoEntregado
             // 
             this.checkBoxNoEntregado.AutoSize = true;
-            this.checkBoxNoEntregado.Location = new System.Drawing.Point(450, 217);
+            this.checkBoxNoEntregado.Location = new System.Drawing.Point(450, 203);
             this.checkBoxNoEntregado.Name = "checkBoxNoEntregado";
-            this.checkBoxNoEntregado.Size = new System.Drawing.Size(115, 20);
+            this.checkBoxNoEntregado.Size = new System.Drawing.Size(109, 19);
             this.checkBoxNoEntregado.TabIndex = 6;
             this.checkBoxNoEntregado.Text = "No entregado ";
             this.checkBoxNoEntregado.UseVisualStyleBackColor = true;
@@ -860,9 +894,9 @@
             // checkBoxEntregado
             // 
             this.checkBoxEntregado.AutoSize = true;
-            this.checkBoxEntregado.Location = new System.Drawing.Point(239, 218);
+            this.checkBoxEntregado.Location = new System.Drawing.Point(239, 204);
             this.checkBoxEntregado.Name = "checkBoxEntregado";
-            this.checkBoxEntregado.Size = new System.Drawing.Size(94, 20);
+            this.checkBoxEntregado.Size = new System.Drawing.Size(88, 19);
             this.checkBoxEntregado.TabIndex = 5;
             this.checkBoxEntregado.Text = "entregado ";
             this.checkBoxEntregado.UseVisualStyleBackColor = true;
@@ -870,63 +904,44 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(46, 86);
+            this.label20.Location = new System.Drawing.Point(46, 81);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(59, 16);
+            this.label20.Size = new System.Drawing.Size(54, 15);
             this.label20.TabIndex = 4;
             this.label20.Text = "cantidad";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(46, 218);
+            this.label19.Location = new System.Drawing.Point(46, 204);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(119, 16);
+            this.label19.Size = new System.Drawing.Size(110, 15);
             this.label19.TabIndex = 3;
             this.label19.Text = "Estado de la venta";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(46, 32);
+            this.label17.Location = new System.Drawing.Point(46, 30);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(65, 16);
+            this.label17.Size = new System.Drawing.Size(66, 15);
             this.label17.TabIndex = 1;
             this.label17.Text = "Nit cliente";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(46, 124);
+            this.label16.Location = new System.Drawing.Point(46, 116);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 16);
+            this.label16.Size = new System.Drawing.Size(57, 15);
             this.label16.TabIndex = 0;
             this.label16.Text = "producto";
             // 
-            // label_reportes_ALERTA_ventas_pendientes
-            // 
-            this.label_reportes_ALERTA_ventas_pendientes.AutoSize = true;
-            this.label_reportes_ALERTA_ventas_pendientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_reportes_ALERTA_ventas_pendientes.Location = new System.Drawing.Point(373, 368);
-            this.label_reportes_ALERTA_ventas_pendientes.Name = "label_reportes_ALERTA_ventas_pendientes";
-            this.label_reportes_ALERTA_ventas_pendientes.Size = new System.Drawing.Size(0, 32);
-            this.label_reportes_ALERTA_ventas_pendientes.TabIndex = 1;
-            this.label_reportes_ALERTA_ventas_pendientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS
-            // 
-            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.AutoSize = true;
-            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.Location = new System.Drawing.Point(325, 373);
-            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.Name = "label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS";
-            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.Size = new System.Drawing.Size(0, 32);
-            this.label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS.TabIndex = 1;
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1257, 541);
+            this.ClientSize = new System.Drawing.Size(1257, 507);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";

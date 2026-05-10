@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -58,37 +59,25 @@ namespace proyecto1programacion
             actualizarComboBoxProducto();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AbrirMenuPrincipal();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            AbrirMenuPrincipal();
-        }
-
-        private void AbrirMenuPrincipal()
-        {
-            MenuPrincipalForm menu = new MenuPrincipalForm();
-            menu.Show();
-        }
-
         private void buttonIngresoProducto_Click(object sender, EventArgs e)
         {
-            Producto producto = new Producto();
-            producto.Codigo = textBoxCodigo.Text;
-            producto.Nombre = textBoxNombreProducto.Text;
-            producto.Marca = textBoxMarca.Text;
-            producto.Precio_compra = numeriPrecioCompra.Value;
-            producto.Precio_venta = numericPrecioVenta.Value;
-            producto.Cantidad_existente = numericCantidad.Value;
+            if (!productos.Exists(prod => prod.Codigo.Equals(textBoxCodigo.Text)))
+            {
+                Producto producto = new Producto();
+                producto.Codigo = textBoxCodigo.Text;
+                producto.Nombre = textBoxNombreProducto.Text;
+                producto.Marca = textBoxMarca.Text;
+                producto.Precio_compra = numeriPrecioCompra.Value;
+                producto.Precio_venta = numericPrecioVenta.Value;
+                producto.Cantidad_existente = numericCantidad.Value;
 
-            productos.Add(producto);
-            PersistenciaProducto persistencia = new PersistenciaProducto();
-            persistencia.GuardarJson(productos);
-            ActualizarComboBox();
-            MessageBox.Show("Producto ingresado correctamente.");
+                productos.Add(producto);
+                PersistenciaProducto persistencia = new PersistenciaProducto();
+                persistencia.GuardarJson(productos);
+                ActualizarComboBox();
+                MessageBox.Show("Producto ingresado correctamente.");
+            }
+            else MessageBox.Show("El código del producto ya existe, confirme si se ingreso el código correctamente", "Producto Existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -141,18 +130,22 @@ namespace proyecto1programacion
 
         private void buttonIngresoCliente_Click(object sender, EventArgs e)
         {
-            Cliente cliente= new Cliente();
-            cliente.Nit=textBoxNit.Text;
-            cliente.Nombre=textBoxNombreCliente.Text;
-            cliente.Apellido = textBoxApellidoCliente.Text;
-            cliente.Direccion = textBoxDireccionCliente.Text;
-            cliente.Telefono = textBoxTelefonoCliente.Text;
-            clientes.Add(cliente);
-            PersistenciaCliente persistencia = new PersistenciaCliente();
-            persistencia.GuardarJson(clientes);
-            actualizarComboBoxCliente();
-            actualizarComboBoxProducto();
-            MessageBox.Show("Cliente ingresado correctamente.");
+            if (!clientes.Exists(client => client.Nit.Equals(textBoxNit.Text)))
+            {
+                Cliente cliente = new Cliente();
+                cliente.Nit = textBoxNit.Text;
+                cliente.Nombre = textBoxNombreCliente.Text;
+                cliente.Apellido = textBoxApellidoCliente.Text;
+                cliente.Direccion = textBoxDireccionCliente.Text;
+                cliente.Telefono = textBoxTelefonoCliente.Text;
+                clientes.Add(cliente);
+                PersistenciaCliente persistencia = new PersistenciaCliente();
+                persistencia.GuardarJson(clientes);
+                actualizarComboBoxCliente();
+                actualizarComboBoxProducto();
+                MessageBox.Show("Cliente ingresado correctamente.");
+            }
+            else MessageBox.Show("El NIT del cliente ya existe en el sistema, confirme si se ingreso correctamente", "Cliente ya existe en el sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -195,10 +188,63 @@ namespace proyecto1programacion
                 return;
             }
 
+            //Función de agregar clientes inexistentes "On the fly"
+            if (comboBoxVentaNit.SelectedValue == null)
+            {
+                DialogResult resultado = MessageBox.Show("El cliente no existe. Desea agregar al nuevo cliente y continuar con la venta?",
+                    "Cliente Inexistente en el sistema",
+                    MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Question);
+
+                switch (resultado)
+                {
+                    case DialogResult.Yes:
+                        AgregarClienteOTF acotf = new AgregarClienteOTF();
+                        acotf.ShowDialog();
+
+                        string clienteNit = acotf.nit;
+                        string clienteNombre = acotf.nombre;
+                        string clienteApellido = acotf.apellido;
+                        string clienteDireccion = acotf.direccion;
+                        string clienteTelefono = acotf.telefono;
+
+                        Cliente cliente = new Cliente();
+                        cliente.Nit = clienteNit;
+                        cliente.Nombre = clienteNombre;
+                        cliente.Apellido = clienteApellido;
+                        cliente.Direccion = clienteDireccion;
+                        cliente.Telefono = clienteTelefono;
+                        clientes.Add(cliente);
+                        PersistenciaCliente persistencia = new PersistenciaCliente();
+                        persistencia.GuardarJson(clientes);
+                        actualizarComboBoxCliente();
+                        actualizarComboBoxProducto();
+                        MessageBox.Show("Cliente ingresado correctamente.");
+
+                        guardarDatosDeVenta(cliente.Nit, productoSeleccionado, cantidadVendida);
+                        break;
+                    case DialogResult.No:
+                        DialogResult resultado2 = MessageBox.Show("¿Desea guardar el nit como \"Consumidor Final\"?", "C/F", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (resultado2 != DialogResult.Yes) return;
+                        else
+                        {
+                            guardarDatosDeVenta(clientes.FirstOrDefault(c => c.Nombre.Equals("C/F")).Nit, productoSeleccionado, cantidadVendida);
+                        }
+                        break;
+                    default:
+                        MessageBox.Show("La venta se ha cancelado");
+                        break;
+                }
+            }
+            else guardarDatosDeVenta(comboBoxVentaNit.SelectedValue.ToString(), productoSeleccionado, cantidadVendida); 
+        }
+
+        private void guardarDatosDeVenta(string clienteNit ,Producto productoSeleccionado, decimal cantidadVendida) {
             Factura factura = new Factura();
             factura.Numfactura = facturas.Count + 1;
             factura.Fechaventa = DateTime.Now;
-            factura.Nitcliente = comboBoxVentaNit.Text;
+            factura.Nitcliente = clienteNit;
             factura.Cantidadproducto = textBoxVentaCantidad.Text;
             factura.Codigoproducto = productoSeleccionado.Codigo;
             factura.Nombreproducto = productoSeleccionado.Nombre;
@@ -238,11 +284,8 @@ namespace proyecto1programacion
 
             MessageBox.Show("Factura registrada y stock actualizado correctamente.");
 
-
-
             //Guardar Venta Para reportes
             Reportes_Productos_Mas_vendidos();
-
         }
 
 

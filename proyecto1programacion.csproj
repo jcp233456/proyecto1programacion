@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarClienteOTF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarClienteOTF.Designer.cs">
+      <DependentUpon>AgregarClienteOTF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cliente.cs" />
     <Compile Include="Factura.cs" />
     <Compile Include="Form1.cs">
@@ -60,12 +66,6 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MenuPrincipalForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuPrincipalForm.Designer.cs">
-      <DependentUpon>MenuPrincipalForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PersistenciaCliente.cs" />
     <Compile Include="PersistenciaFactura.cs" />
@@ -75,6 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reportes_MasVendidos.cs" />
     <Compile Include="Reportes_Producto_Por_entregar.cs" />
+    <EmbeddedResource Include="AgregarClienteOTF.resx">
+      <DependentUpon>AgregarClienteOTF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
