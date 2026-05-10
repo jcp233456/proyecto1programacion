@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.AdminMenu = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.Tab_Nuevo_Producto = new System.Windows.Forms.TabPage();
@@ -108,7 +108,12 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.adminMenuBtn = new System.Windows.Forms.Button();
+            this.clientMenuBtn = new System.Windows.Forms.Button();
+            this.returnBtn = new System.Windows.Forms.Button();
+            this.adminLabel = new System.Windows.Forms.Label();
+            this.clientLabel = new System.Windows.Forms.Label();
+            this.AdminMenu.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.Tab_Nuevo_Producto.SuspendLayout();
@@ -133,15 +138,15 @@
             this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // AdminMenu
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 11);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1233, 494);
-            this.tabControl1.TabIndex = 0;
+            this.AdminMenu.Controls.Add(this.tabPage1);
+            this.AdminMenu.Controls.Add(this.tabPage2);
+            this.AdminMenu.Location = new System.Drawing.Point(12, 33);
+            this.AdminMenu.Name = "AdminMenu";
+            this.AdminMenu.SelectedIndex = 0;
+            this.AdminMenu.Size = new System.Drawing.Size(1233, 494);
+            this.AdminMenu.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -153,6 +158,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "admin";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // tabControl2
             // 
@@ -937,15 +943,70 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "producto";
             // 
+            // adminMenuBtn
+            // 
+            this.adminMenuBtn.Location = new System.Drawing.Point(296, 267);
+            this.adminMenuBtn.Name = "adminMenuBtn";
+            this.adminMenuBtn.Size = new System.Drawing.Size(165, 76);
+            this.adminMenuBtn.TabIndex = 1;
+            this.adminMenuBtn.Text = "Administrador";
+            this.adminMenuBtn.UseVisualStyleBackColor = true;
+            this.adminMenuBtn.Click += new System.EventHandler(this.adminMenuBtn_Click);
+            // 
+            // clientMenuBtn
+            // 
+            this.clientMenuBtn.Location = new System.Drawing.Point(796, 267);
+            this.clientMenuBtn.Name = "clientMenuBtn";
+            this.clientMenuBtn.Size = new System.Drawing.Size(165, 76);
+            this.clientMenuBtn.TabIndex = 2;
+            this.clientMenuBtn.Text = "Cliente";
+            this.clientMenuBtn.UseVisualStyleBackColor = true;
+            this.clientMenuBtn.Click += new System.EventHandler(this.clientMenuBtn_Click);
+            // 
+            // returnBtn
+            // 
+            this.returnBtn.Location = new System.Drawing.Point(1166, 4);
+            this.returnBtn.Name = "returnBtn";
+            this.returnBtn.Size = new System.Drawing.Size(75, 23);
+            this.returnBtn.TabIndex = 1;
+            this.returnBtn.Text = "Regresar";
+            this.returnBtn.UseVisualStyleBackColor = true;
+            this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
+            // 
+            // adminLabel
+            // 
+            this.adminLabel.AutoSize = true;
+            this.adminLabel.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.adminLabel.Location = new System.Drawing.Point(200, 96);
+            this.adminLabel.Name = "adminLabel";
+            this.adminLabel.Size = new System.Drawing.Size(318, 30);
+            this.adminLabel.TabIndex = 3;
+            this.adminLabel.Text = "Menu de Adminsitradores:";
+            // 
+            // clientLabel
+            // 
+            this.clientLabel.AutoSize = true;
+            this.clientLabel.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.clientLabel.Location = new System.Drawing.Point(764, 96);
+            this.clientLabel.Name = "clientLabel";
+            this.clientLabel.Size = new System.Drawing.Size(224, 30);
+            this.clientLabel.TabIndex = 9;
+            this.clientLabel.Text = "Menu de Clientes:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1257, 507);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(1257, 539);
+            this.Controls.Add(this.returnBtn);
+            this.Controls.Add(this.AdminMenu);
+            this.Controls.Add(this.adminLabel);
+            this.Controls.Add(this.adminMenuBtn);
+            this.Controls.Add(this.clientLabel);
+            this.Controls.Add(this.clientMenuBtn);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.tabControl1.ResumeLayout(false);
+            this.AdminMenu.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.Tab_Nuevo_Producto.ResumeLayout(false);
@@ -977,12 +1038,13 @@
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl AdminMenu;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage Tab_Nuevo_Producto;
@@ -1062,6 +1124,11 @@
         private System.Windows.Forms.DataGridView datagrid_reportes_ventas_pendientes;
         private System.Windows.Forms.Label label_reportes_ALERTA_ventas_pendientes;
         private System.Windows.Forms.Label label_reportes_ALERTA_PRODUCTOS_MASVENDIDOS;
+        private System.Windows.Forms.Button adminMenuBtn;
+        private System.Windows.Forms.Button clientMenuBtn;
+        private System.Windows.Forms.Button returnBtn;
+        private System.Windows.Forms.Label adminLabel;
+        private System.Windows.Forms.Label clientLabel;
     }
 }
 

@@ -14,7 +14,7 @@ namespace proyecto1programacion
     public partial class Form1 : Form
     {
         List<Producto> productos = new List<Producto>();
-        List<Cliente>clientes= new List<Cliente>();
+        List<Cliente> clientes= new List<Cliente>();
         List<Factura> facturas = new List<Factura>();
         public Form1()
         {
@@ -23,7 +23,8 @@ namespace proyecto1programacion
             CargarClientes();
             CargarFacturas();
             CargarReportes();
-
+            AdminMenu.Hide();
+            returnBtn.Hide();
         }
 
         private void CargarProductos()
@@ -445,10 +446,6 @@ namespace proyecto1programacion
         }
 
 
-
-
-
-
         private void label_Reportes_VentasEntreFechas_3_Click(object sender, EventArgs e)
         {
 
@@ -479,6 +476,36 @@ namespace proyecto1programacion
 
         }
 
-        
+        private void adminMenuBtn_Click(object sender, EventArgs e)
+        {
+            AdminMenu.Show();
+            returnBtn.Show();
+            clientMenuBtn.Hide();
+            adminMenuBtn.Hide();
+            adminLabel.Hide();
+            clientLabel.Hide();
+        }
+
+        private void clientMenuBtn_Click(object sender, EventArgs e)
+        {
+            MenuClientes mClietnes = new MenuClientes(clientes, productos, facturas);
+            mClietnes.Show();
+            this.Hide();
+        }
+
+        private void returnBtn_Click(object sender, EventArgs e)
+        {
+            AdminMenu.Hide();
+            returnBtn.Hide();
+            clientMenuBtn.Show();
+            adminMenuBtn.Show();
+            adminLabel.Show();
+            clientLabel.Show();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

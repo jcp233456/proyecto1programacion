@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace proyecto1programacion
 {
-    internal class Factura
+    public class Factura
     {
         int numfactura;
         string nitcliente;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace proyecto1programacion
 {
-    internal class Cliente
+    public class Cliente
     {
         string nit;
         string nombre;
